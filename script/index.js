@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const buttonGroups = document.querySelectorAll('.button-group');
 
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const wish = document.getElementById("wish").value;
 
         // Google Apps Script Web App URL
-        const url = "https://script.google.com/macros/s/AKfycbwRRXSktkun-LTvFfAqG_7cBSs376dC6BNAUP_nKV0Lvjngpn1brKKF_1oQqxEQOHO5/exec"; // Thay bằng URL của bạn
+        const url = "https://script.google.com/macros/s/AKfycbwRRXSktkun-LTvFfAqG_7cBSs376dC6BNAUP_nKV0Lvjngpn1brKKF_1oQqxEQOHO5/exec"; 
 
         // Gửi dữ liệu
         fetch(url, {
@@ -50,4 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => console.error("Error:", err));
     });
+
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicToggle");
+
+    // Thử autoplay—có thể bị chặn nếu không có tương tác người dùng
+    music.play().catch(() => console.log("Autoplay bị chặn."));
+    btn.addEventListener("click", () => {
+        if (music.paused) {
+            music.play();
+            btn.textContent = "🔊";
+        } else {
+            music.pause();
+            btn.textContent = "🔈";
+        }
+    });
 });
+
