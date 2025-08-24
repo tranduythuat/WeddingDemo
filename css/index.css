@@ -1,0 +1,543 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: "SVN-Gotham", cursive;
+    background: #fff8ee;
+    color: #363823;
+    text-align: center;
+    line-height: 1.6;
+    width: 100%;
+    margin: auto;
+}
+
+@font-face {
+    font-family: "SVN-Gotham";
+    src: url("../fonts/SVN-Gotham Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SVN-Gotham Light";
+    src: url("../fonts/SVN-Gotham Light.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MsClaudy";
+    src: url("../fonts/MsClaudy-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SVN-Gotham Bold Italic";
+    src: url("../fonts/SVN-Gotham Bold Italic.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    flex-direction: column; /* xếp dọc */
+    align-items: center;    /* canh giữa ngang */
+    text-align: center;     /* canh giữa text */
+}
+
+.hero .logo img {
+    max-width: 120px; /* chỉnh lại kích thước logo */
+    margin-bottom: 20px;
+}
+
+.hero .invite p  {
+    font-size: 0.625rem;          /* ~7.7pt */
+    font-weight: 400;         /* normal, đổi 500/600 nếu bản thiết kế đậm hơn */
+    text-transform: uppercase;/* chữ in hoa */
+    letter-spacing: 2px;      /* tăng khoảng cách chữ */
+    line-height: 1.6;         /* dễ đọc hơn */
+    color: #555;              /* chỉnh màu xám nhẹ thay vì đen gắt */
+    margin: 15px 0;           /* khoảng cách trên dưới */
+}
+
+.hero .invite .text1 {
+    font-family: "SVN-Gotham", cursive;
+    font-weight: 700;
+}
+
+.hero .invite .text2 {
+    font-family: "SVN-Gotham Light", cursive;
+}
+
+.hero h1 {
+    font-family: "MsClaudy", cursive;
+    font-size: 5rem;      /* cỡ lớn */
+    font-weight: normal;  /* MsClaudy thường không cần bold */
+    line-height: 1.2;
+    margin: 20px 0;
+    word-spacing: 20px;
+    color: #363823;
+}
+
+.hero .divider.swan {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.divider.swan img {
+    max-width: 150px;
+    height: auto;
+}
+
+.family {
+    padding: 0px 20px;
+    background-image: url("../Images/g965.png"); /* đổi đúng đường dẫn */
+    background-size: cover;     /* hoặc cover nếu muốn full */
+    background-repeat: no-repeat; /* không lặp lại */
+    background-position: center;  /* căn giữa */
+    line-height: 1.6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 143xp;
+}
+
+.family p {
+    font-family: "SVN-Gotham Light", cursive;
+    font-size: 0.616rem; 
+    line-height: 1.7;
+}
+
+.family p label {
+    font-family: "SVN-Gotham", cursive;
+    font-size: 0.625rem;
+}
+
+.family p:first-child {
+    text-align: left;
+    padding-top: 33.64px;
+    padding-bottom: 30px;
+}
+
+.family p:last-child {
+    text-align: right;
+    padding-bottom: 30px;
+}
+
+.save-date {
+    background-image: url("../Images/background1.png"); 
+    background-size: contain;     /* hoặc cover nếu muốn full */
+    background-repeat: no-repeat; /* không lặp lại */
+    background-position: bottom;  /* căn giữa */
+    font-size: 1.1rem;
+    font-weight: 400; /* Normal (Book) */
+    letter-spacing: 1px; /* tùy chỉnh thêm nếu muốn giống hệt */
+    padding-bottom: 125px;
+
+}
+
+.save-date .subtitle {
+    font-size: 0.644rem;
+    font-family: "SVN-Gotham Light", cursive;
+    padding-top: 73px;
+    padding-bottom: 16px;
+}
+
+.save-date .date {
+    padding-bottom: 50px;
+}
+
+.save-date .place {
+    padding: 0 30px;
+}
+
+.save-date .place img {
+    padding-bottom: 50px;
+}
+
+.save-date .place .name {
+    font-family: "MsClaudy", cursive;
+    font-size: 4.405rem;
+    line-height: 15px;
+    padding-bottom: 16px;
+}
+
+.save-date .address {
+    font-family: "SVN-Gotham Light", cursive;
+    font-size: 0.5rem;
+    padding-bottom: 15px;
+}
+
+.save-date .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.6438rem;
+    height: 18.79px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    padding: 40px 20px;
+    background-image: url("../Images/g979.png"); /* đổi đúng đường dẫn */
+    background-size: cover;     /* hoặc cover nếu muốn full */
+    background-repeat: no-repeat; /* không lặp lại */
+    background-position: center;  /* căn giữa */
+}
+
+.timeline h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.timeline .events {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+.timeline .events .event {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;   /* sắp xếp theo cột */
+    justify-content: space-between; /* p trên, icon giữa, span dưới */
+    align-items: center;      /* căn giữa theo chiều ngang */
+    height: 150px;            /* chiều cao cố định để căn icon giữa */
+    text-align: center;
+}
+
+.timeline .events .event p {
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "SVN-Gotham Light", cursive;;
+}
+
+.timeline .events .event .icon {
+    padding: 5px;
+    align-self: center;
+}
+
+.timeline .events .event .icon img{
+    max-width: 100%;
+    height: auto;
+}
+
+.timeline .events .event span {
+    font-size: 0.6969rem;
+}
+
+.attendance {
+    background-image: url("../Images/backgroud2.png"); /* đổi đúng đường dẫn */
+    background-size: contain;     /* hoặc cover nếu muốn full */
+    background-repeat: no-repeat; /* không lặp lại */
+    background-position: bottom;  /* căn giữa */
+    align-items: center;
+    padding-bottom: 254px;
+}
+
+.attendance .divider.swan {
+    padding: 60px;
+}
+
+.attendance h3 {
+    font-size: 1.1rem;
+    font-weight: 200;
+    padding-bottom: 40px;
+}
+
+.attendance .divider-box {
+    padding-bottom: 40px;
+}
+
+.attendance p {
+    font-size: 0.7831rem;
+    font-family: "SVN-Gotham Light", cursive;
+    line-height: 17px;
+    font-weight: 300;
+    padding-bottom: 5px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Hoặc font chữ tương tự như trong ảnh */
+    text-align: center;
+}
+
+.divider-line {
+    border: 0;
+    height: 1px;
+    background-color: #999; /* Màu sắc của đường kẻ */
+    margin: 30px auto;
+    width: 100%; /* Chiều rộng của đường kẻ */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.button-group button {
+    padding: 10px 70px;
+    background-color: inherit;
+    color: #363823;
+}
+
+.btn {
+    padding: 10px 40px;
+    font-size: 0.7331rem;
+    font-weight: bold;
+    border-radius: 50px; /* Bo tròn các góc */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.form-container .input-field, 
+.form-container .textarea-field {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 1px solid #a3a3a3; /* Màu viền */
+    border-radius: 50px; /* Bo tròn tương tự các nút */
+    box-sizing: border-box;
+    font-size: 0.7331rem;
+    margin-bottom: 20px;
+    outline: none; /* Xóa viền khi focus */
+    background-color: inherit;
+}
+
+.form-container .textarea-field {
+    height: 105px; /* Chiều cao lớn hơn */
+    border-radius: 20px; /* Bo tròn góc ít hơn */
+    resize: vertical; /* Chỉ cho phép thay đổi chiều cao */
+}
+
+.form-container .btn-confirm {
+    background-color: #4a4d3f;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+/* Cho màn hình nhỏ hơn 768px (tablet/mobile) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 2px;
+    }
+}
+  
+/* Cho màn hình rất nhỏ (mobile) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    .container {
+        padding: 2px;
+    }
+}
+
+
+
+/* Reset */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Georgia", serif;
+    background: #fdfaf4;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .hero {
+    padding: 60px 20px;
+  }
+  
+  .logo {
+    font-family: cursive;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .invite {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .names {
+    font-family: "Brush Script MT", cursive;
+    font-size: 48px;
+  }
+  
+  .names span {
+    font-family: serif;
+    font-size: 32px;
+    margin: 0 10px;
+  }
+  
+  .divider.swan {
+    margin: 30px auto;
+    width: 60px;
+    height: 60px;
+    background: url('swan.png') no-repeat center/contain;
+  }
+  
+  .family {
+    background: #e0dfd7;
+    padding: 30px 20px;
+    font-size: 14px;
+  }
+  
+  .save-date {
+    padding: 50px 20px;
+  }
+  
+  .save-date .subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .save-date h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .place {
+    font-family: "Brush Script MT", cursive;
+    font-size: 32px;
+    margin: 10px 0;
+  }
+  
+  .address {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .timeline {
+    background: #e0dfd7;
+    padding: 40px 20px;
+  }
+  
+  .timeline h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .events {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .event {
+    font-size: 12px;
+  }
+  
+  .event .icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .attendance {
+    padding: 50px 20px;
+  }
+  
+  .attendance h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .attendance p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .yes, .no {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .yes {
+    background: #333;
+    color: #fff;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-family: inherit;
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+  
+  .confirm {
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px;
+    cursor: pointer;
+  }
+*/
