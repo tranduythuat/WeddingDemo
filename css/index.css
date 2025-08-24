@@ -15,6 +15,11 @@ body {
     margin: auto;
 }
 
+.container {
+    width: 426px;
+    margin: 0 auto;
+}
+
 @font-face {
     font-family: "SVN-Gotham";
     src: url("../fonts/SVN-Gotham Regular.otf") format("truetype");
@@ -58,17 +63,17 @@ body {
 
 .hero .invite p  {
     font-size: 0.625rem;          /* ~7.7pt */
-    font-weight: 400;         /* normal, đổi 500/600 nếu bản thiết kế đậm hơn */
+    font-weight: 300;         /* normal, đổi 500/600 nếu bản thiết kế đậm hơn */
     text-transform: uppercase;/* chữ in hoa */
     letter-spacing: 2px;      /* tăng khoảng cách chữ */
     line-height: 1.6;         /* dễ đọc hơn */
     color: #555;              /* chỉnh màu xám nhẹ thay vì đen gắt */
-    margin: 15px 0;           /* khoảng cách trên dưới */
+    margin: 9.72px 0;           /* khoảng cách trên dưới */
 }
 
 .hero .invite .text1 {
     font-family: "SVN-Gotham", cursive;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 .hero .invite .text2 {
@@ -280,7 +285,7 @@ body {
     text-align: center;
 }
 
-.divider-line {
+.form-container .divider-line {
     border: 0;
     height: 1px;
     background-color: #999; /* Màu sắc của đường kẻ */
@@ -288,19 +293,26 @@ body {
     width: 100%; /* Chiều rộng của đường kẻ */
 }
 
-.button-group {
+.form-container .button-group {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.button-group button {
+.form-container .button-group button {
     padding: 10px 70px;
     background-color: inherit;
     color: #363823;
+    border: 1px solid #363823;
+
 }
 
-.btn {
+.form-container .button-group button.selected {
+    background-color: #363823; 
+    color: #fff8ee;
+}
+
+.form-container .btn {
     padding: 10px 40px;
     font-size: 0.7331rem;
     font-weight: bold;
@@ -315,7 +327,7 @@ body {
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 10px;
-    border: 1px solid #a3a3a3; /* Màu viền */
+    border: 1px solid #363823; /* Màu viền */
     border-radius: 50px; /* Bo tròn tương tự các nút */
     box-sizing: border-box;
     font-size: 0.7331rem;
@@ -357,187 +369,3 @@ body {
         padding: 2px;
     }
 }
-
-
-
-/* Reset */
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Georgia", serif;
-    background: #fdfaf4;
-    color: #333;
-    text-align: center;
-    line-height: 1.6;
-  }
-  
-  .hero {
-    padding: 60px 20px;
-  }
-  
-  .logo {
-    font-family: cursive;
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  .invite {
-    font-size: 12px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-  }
-  
-  .names {
-    font-family: "Brush Script MT", cursive;
-    font-size: 48px;
-  }
-  
-  .names span {
-    font-family: serif;
-    font-size: 32px;
-    margin: 0 10px;
-  }
-  
-  .divider.swan {
-    margin: 30px auto;
-    width: 60px;
-    height: 60px;
-    background: url('swan.png') no-repeat center/contain;
-  }
-  
-  .family {
-    background: #e0dfd7;
-    padding: 30px 20px;
-    font-size: 14px;
-  }
-  
-  .save-date {
-    padding: 50px 20px;
-  }
-  
-  .save-date .subtitle {
-    font-size: 12px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-  }
-  
-  .save-date h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  .place {
-    font-family: "Brush Script MT", cursive;
-    font-size: 32px;
-    margin: 10px 0;
-  }
-  
-  .address {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .btn {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .timeline {
-    background: #e0dfd7;
-    padding: 40px 20px;
-  }
-  
-  .timeline h3 {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .events {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .event {
-    font-size: 12px;
-  }
-  
-  .event .icon {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .attendance {
-    padding: 50px 20px;
-  }
-  
-  .attendance h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-  
-  .attendance p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .yes, .no {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 1px solid #333;
-    background: none;
-    cursor: pointer;
-  }
-  
-  .yes {
-    background: #333;
-    color: #fff;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  input, textarea {
-    padding: 10px;
-    border: 1px solid #aaa;
-    border-radius: 8px;
-    font-family: inherit;
-  }
-  
-  textarea {
-    min-height: 100px;
-  }
-  
-  .confirm {
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    padding: 12px;
-    cursor: pointer;
-  }
-*/
