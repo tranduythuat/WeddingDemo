@@ -19,4 +19,35 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+
+
+    // --- Submit form và gửi lên Google Sheet ---
+    const form = document.getElementById("weddingForm");
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        console.log('submit form');
+
+        // Lấy dữ liệu
+        const selected = document.querySelector(".button-group .btn.selected")?.textContent || "";
+        const name = document.getElementById("name").value;
+        const wish = document.getElementById("wish").value;
+
+        // Google Apps Script Web App URL
+        const url = "https://script.google.com/macros/s/AKfycbwRRXSktkun-LTvFfAqG_7cBSs376dC6BNAUP_nKV0Lvjngpn1brKKF_1oQqxEQOHO5/exec"; // Thay bằng URL của bạn
+
+        // Gửi dữ liệu
+        fetch(url, {
+            method: "POST",
+            headers: {"Content-Type": "application/x-www-form-urlencoded"},
+            body: new URLSearchParams({selected, name, wish})
+        })
+        .then(res => res.json())
+        .then(data => {
+            alert("Thank you! Your wish has been sent.");
+            form.reset();
+            document.querySelectorAll(".button-group .btn").forEach(btn => btn.classList.remove("selected"));
+        })
+        .catch(err => console.error("Error:", err));
+    });
 });
