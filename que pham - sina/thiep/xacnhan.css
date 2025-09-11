@@ -728,8 +728,6 @@ hr{
   flex-direction: column;
   padding: 20px 0;
   max-width: 100%;
-  position: relative;
-  left: 50px;
 }
 
 .story-1 .icon {
@@ -1361,14 +1359,23 @@ textarea{
 }
 
 /* Hiệu ứng fade-right */
-.lb3, .story-1 {
+.lb3 {
   transform: translateX(-50px);
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
 }
 
-.lb3.visible, .story-1.visible {
+.story-1 {
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.lb3.visible {
   transform: translateX(0);
+  opacity: 1;
+}
+
+.story-1.visible {
   opacity: 1;
 }
 
@@ -1379,8 +1386,12 @@ textarea{
   transition: transform 0.5s, opacity 0.5s;
 }
 
-.lb3.visible, .story-2.visible {
+.lb3.visible {
   transform: translateX(0px);
+  opacity: 1;
+}
+
+.story-2.visible {
   opacity: 1;
 }
 
@@ -1390,9 +1401,6 @@ textarea{
   align-items: flex-end;
   padding: 20px 0;
   max-width: 100%;
-  position: relative;
-  left: -50px;
-  transform: translateX(50px);
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
 }
