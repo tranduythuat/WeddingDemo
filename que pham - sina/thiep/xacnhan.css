@@ -1488,6 +1488,9 @@ textarea{
   .map{
     width: 300px;
   }
+  .box-timeline .events .event {
+    height: 170px;
+  }
 }
 
 .player{
