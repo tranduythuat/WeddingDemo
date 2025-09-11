@@ -1,0 +1,18 @@
+@font-face {
+    font-family: '1FTV VIP Retro Signature';
+    src: url('1FTVVIPRetroSignature.woff2') format('woff2'),
+        url('1FTVVIPRetroSignature.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MTD Doppelganger Display';
+    src: url('MTDDoppelgangerDisplay.woff2') format('woff2'),
+        url('MTDDoppelgangerDisplay.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
