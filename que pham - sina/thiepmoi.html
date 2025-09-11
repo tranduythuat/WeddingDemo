@@ -269,6 +269,47 @@
             </div>
         </div>
     </div>
+    <button class="player" id="btn" aria-label="Play/Pause">
+        <img id="iconSvg" src="./thiep/images/cd.png" alt="Music Icon">
+    </button>
+    <audio id="audio" preload="auto" src="./thiep/music/music.mp3" type="audio/mpeg"></audio>
+    <script>
+        const btn = document.getElementById('btn');
+        const audio = document.getElementById('audio');
+        const iconPath = document.getElementById('playPath');
+        const iconSvg = document.getElementById('iconSvg');
+
+        function setPauseIcon(){
+            iconPath.setAttribute('d','M6 5h4v14H6zM14 5h4v14h-4z');
+        }
+        function setPlayIcon(){
+            iconPath.setAttribute('d','M6 4.5v15l13-7.5L6 4.5z');
+        }
+
+        function toggle(){
+            if(!audio.src){
+                alert('Chưa có nhạc, vui lòng thêm src cho audio.');
+                return;
+            }
+            if(audio.paused){
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        btn.addEventListener('click',toggle);
+
+        audio.addEventListener('play',()=>{
+            iconSvg.classList.add('spin');
+            setPauseIcon();
+        });
+        audio.addEventListener('pause',()=>{
+            iconSvg.classList.remove('spin');
+            setPlayIcon();
+        });
+    </script>
+
     <script>
         AOS.init();
     </script>
@@ -450,7 +491,7 @@
             }
         }
     </script>
-    <script>
+    <!-- <script>
         const musicCircle = document.getElementById("musicCircle");
         const audio = document.getElementById("audio");
 
@@ -465,7 +506,7 @@
                 musicCircle.classList.remove("spin"); // Dừng xoay
             }
         });
-    </script>
+    </script> -->
     <script src="./thiep/thiep.js"></script>
 </body>
 

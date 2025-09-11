@@ -267,7 +267,7 @@ body{
   background-image: url('https://drive.google.com/thumbnail?id=1yb9lbH-455kftkE82SJVUxZQfgtuO2Q1&sz=w1500');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: -317px 0;
+  background-position: -333px 0;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -656,7 +656,7 @@ hr{
 
 .dresscode-images {
   position: relative;
-  width: 450px; 
+  width: 400px; 
   height: 600px;
 }
 
@@ -1474,4 +1474,34 @@ textarea{
   .map{
     width: 300px;
   }
+}
+
+.player{
+  position:fixed;
+  bottom:16px;
+  right:0px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:linear-gradient(145deg, #7b61ff, #00d4ff);
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  border:none;
+  outline:none;
+}
+
+.player img{
+  width: 100%;
+  height: auto;
+}
+
+.spin{
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
 }
