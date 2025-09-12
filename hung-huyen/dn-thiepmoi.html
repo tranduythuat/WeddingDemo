@@ -299,14 +299,18 @@
             alert(
                 'THANK YOU FOR YOUR RESPONSE! The data being sent will take a few seconds. Please click "OK" and wait for the form to refresh automatically.'
             );
+            let formData = new FormData(form);
+            let data = Object.fromEntries(formData.entries());
+            console.log(data);
 
-            const confirm = document.querySelector('input[name="CONFIRM"]').value;;
-            const name = document.querySelector('input[name="NAME"]').value;;
-            const number_guest = document.querySelector('select[name="GUEST"]').value;
-            const wish = document.getElementById("message").value;
+            const confirm = data.CONFIRM;
+            const name = data.NAME;
+            const number_guest = data.GUEST;
+            const wish = data.WISH;
 
             // Google Apps Script Web App URL
-            const url = ""; 
+            // const url = "https://script.google.com/macros/s/AKfycbwc5Mx1iPcFPAQ94El-u1Ouvbc4Gu0u7WnzKCsZFnE7_y0vLEWnLl4wYwfAyG4P_gU/exec?sheet=ha-noi"; 
+            const url = "https://script.google.com/macros/s/AKfycbwc5Mx1iPcFPAQ94El-u1Ouvbc4Gu0u7WnzKCsZFnE7_y0vLEWnLl4wYwfAyG4P_gU/exec?sheet=da-nang"; 
 
             // Gửi dữ liệu
             fetch(url, {
