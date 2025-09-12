@@ -691,7 +691,14 @@ hr{
 
 .lb-dresss{
   font-size: 40px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+}
+
+.lb-dresss-unrequired {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding-bottom: 50px;
 }
 
 
@@ -746,6 +753,12 @@ hr{
   padding-bottom: 15px;
   text-align: justify;
   width: 60%;
+}
+
+.story-1 img.img-story {
+  object-fit: cover;
+  width: 264px;
+  height: 400px;
 }
 
 .img-story{
