@@ -494,7 +494,7 @@ hr{
   flex-direction: column;   /* sắp xếp theo cột */
   justify-content: space-between; /* p trên, icon giữa, span dưới */
   align-items: center;      /* căn giữa theo chiều ngang */
-  height: 150px;            /* chiều cao cố định để căn icon giữa */
+  height: 164px;            /* chiều cao cố định để căn icon giữa */
   text-align: center;
   ;
 }
