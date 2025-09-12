@@ -248,7 +248,7 @@ body{
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  background-color: #F2EBE2;
+  background-color: rgb(255, 255, 255);
 }
 
 .container-wrapper{
@@ -300,7 +300,7 @@ body{
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #F2EBE2;
+  background-color: rgb(255, 255, 255);
   color: #111;
 }
 
@@ -614,7 +614,7 @@ hr{
   display: flex;
   gap: 40px;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
 }
 
 .box-dress .dresscode .color-item {
@@ -625,18 +625,18 @@ hr{
 }
 
 .box-dress .dresscode .circle1 {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 1px solid #000; /* viền đen */
+  /* border: 1px solid #000;  */
 }
 
 .box-dress .dresscode .circle1.black   { background: #2D2F3B; }
-.box-dress .dresscode .circle1.white    { background: #fff; }
+.box-dress .dresscode .circle1.white    { background: #F2EBE2; }
 .box-dress .dresscode .circle1.beige   { background: #F5F5DC; }
 
 .box-dress .dresscode .label {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #2d2f2f;
   text-align: center;
   letter-spacing: 1px;
