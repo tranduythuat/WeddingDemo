@@ -628,12 +628,12 @@ hr{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  /* border: 1px solid #000;  */
+  border: 1px solid #000; 
 }
 
 .box-dress .dresscode .circle1.black   { background: #2D2F3B; }
-.box-dress .dresscode .circle1.white    { background: #F2EBE2; }
-.box-dress .dresscode .circle1.beige   { background: #F5F5DC; }
+.box-dress .dresscode .circle1.white    { background: #fff; }
+.box-dress .dresscode .circle1.beige   { background: #F2EBE2; }
 
 .box-dress .dresscode .label {
   font-size: 0.8rem;
