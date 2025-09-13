@@ -14,8 +14,8 @@
     <!-- Chiều cao ảnh đại diện -->
 
     <!-- Các thông tin khác cho Open Graph -->
-    <meta property="og:title" content="SINA RAHNARZARE - QUE PHAM" />
-    <meta property="og:description" content="SINA RAHNARZARE - QUE PHAM" />
+    <meta property="og:title" content="Sina & Que" />
+    <meta property="og:description" content="Sina & Que" />
     <meta property="og:url" content="https://yenstudio.com.vn/sina-que/thiepmoi.html" />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="./thiep/xacnhan.css" />
@@ -28,7 +28,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link href="./thiep/jquery.fancybox.min.css" rel="stylesheet" />
     <script src="./thiep/jquery.fancybox.min.js"></script>
-    <title>SINA RAHNARZARE - QUE PHAM</title>
+    <title>Sina & Que</title>
 </head>
 
 <body>
@@ -98,7 +98,7 @@
             </div>
             <div class="slider">
                 <div class="slide">
-                    <img src="./thiep/images/DSC05399.JPG" alt="" style="position: relative;width: 670px; object-fit: cover; right: 106px;" />
+                    <img src="./thiep/images/CROP 1.JPG" alt="" />
                 </div>
                 <div class="slide">
                     <img src="./thiep/images/IMG_2579.JPG" alt="" />
@@ -116,7 +116,7 @@
                     <img src="https://drive.google.com/thumbnail?id=1raO7Y8bRFPOe-8BInB8DZJJZaIT9Fb6C&sz=w1000" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="./thiep/images/DSC05310.JPG" alt="" style="object-fit: cover;width: 556px;"/>
+                    <img src="./thiep/images/CROP 2.JPG" alt="" />
                 </div>
                 <div class="slide">
                     <img src="https://drive.google.com/thumbnail?id=1rg6DTLZnqw-etAH14PFQIl8eM9oBXUxW&sz=w1000" alt=""  />
@@ -368,14 +368,17 @@
                 'THANK YOU FOR YOUR RESPONSE! The data being sent will take a few seconds. Please click "OK" and wait for the form to refresh automatically.'
             );
 
-            const confirm = document.querySelector('input[name="CONFIRM"]').value;;
-            const name = document.querySelector('input[name="NAME"]').value;;
-            const number_guest = document.querySelector('select[name="GUEST"]').value;
-            const wish = document.getElementById("message").value;
+            let formData = new FormData(form);
+            let data = Object.fromEntries(formData.entries());
+            console.log(data);
+
+            const confirm = data.CONFIRM;
+            const name = data.NAME;
+            const number_guest = data.GUEST;
+            const wish = data.WISH;
 
             // Google Apps Script Web App URL
-            const url = ""; 
-            // const url = "https://script.google.com/macros/s/AKfycbx8uX0xqMfP03TqN5xqIqk60oev8bzhC_Q7KdbHf_Pq_nrMVKSo435q7HBcb2XDbLlQ6w/exec"; 
+            const url = "https://script.google.com/macros/s/AKfycbw4LG8e5lwMuKWfgRuLeLa4b4Xt5DxqhNt417MFXcD0ct5nMKIQF5G6iY0JVQ6thpP2/exec?sheet=sheet-01"; 
 
             // Gửi dữ liệu
             fetch(url, {
