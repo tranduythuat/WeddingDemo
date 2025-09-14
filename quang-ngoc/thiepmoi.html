@@ -4,12 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thiệp mời</title>
+    <title>Quang & Ngoc</title>
 
     <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+
+    <!-- splidejs -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+    <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -18,110 +25,124 @@
         <!-- 1. Cover -->
         <section class="cover">
             <div class="cover-inner">
-                <div class="cover-logo logo">
-                    <img src="./images/logo.png" alt="">
+                <div data-aos="fade-down" class="cover-logo logo">
+                    <img data-aos="fade-down" src="./images/logo.png" alt="">
                 </div>
-                <div data-aos="fade-up" class="cover-heart animate__fadeInUp">
+                <div data-aos="flip-left" class="cover-heart heartbeat">
                     <img src="./images/g926.png" alt="">
                 </div>
                 <p data-aos="fade-right" class="cover-text-1">TRÂN TRỌNG KÍNH MỜI BẠN</p>
-                <p class="cover-text-2">DÀNH THỜI GIAN ĐẾN THAM DỰ TIỆC CƯỚI THÂN MẬT CỦA</p>
-                <h2 data-aos="new-animation" class="cover-names">Vinh Quang & Bảo Ngọc</h1>
+                <p data-aos="fade-left" class="cover-text-2">DÀNH THỜI GIAN ĐẾN THAM DỰ TIỆC CƯỚI THÂN MẬT CỦA</p>
+                <h2 data-aos="fade-up" class="cover-names">Vinh Quang & Bảo Ngọc</h1>
             </div>
         </section>
 
         <!-- 2. Thời gian -->
         <section class="time">
-            <h2>Thời gian</h2>
-            <div data-aos="fade-right" class="time-box">
-                <p class="time-hour">16:00 PM</p>
-                <p class="time-date">08.11.2025</p>
+            <h2 data-aos="fade-in">Thời gian</h2>
+            <div class="time-box">
+                <p data-aos="fade-right" class="time-hour">16:00 PM</p>
+                <p data-aos="fade-left" class="time-date">08.11.2025</p>
             </div>
-            <p class="time-sub animate__animated animate__fadeInUp">Ngày 08 tháng 11 năm 2025</p>
+            <p data-aos="flip-right" class="time-sub">Ngày 08 tháng 11 năm 2025</p>
             <img src="./images/g604.png" class="leaf-icon" alt="">
         </section>
 
         <!-- 3. Địa điểm -->
         <section class="location">
-            <h2>Địa điểm</h2>
+            <h2 data-aos="fade-down">Địa điểm</h2>
             <img src="./images/g604.png" class="leaf-icon" alt="">
-            <p class="location-name">TNN GARDEN</p>
-            <p class="location-address">
+            <p data-aos="flip-left" class="location-name">TNN GARDEN</p>
+            <p data-aos="fade-up" class="location-address">
                 123 Phường Trần Nhật Duật, TP. Buôn Ma Thuột
             </p>
-            <a href="#" class="btn">MAPS</a>
-            <div class="location-image">    
-                <img src="./images/g664.png" class="img-frame" alt="Ảnh địa điểm" />
+            <a data-aos="flip-up" href="#" class="btn shake-top">MAPS</a>
+            <div class="location-image location-slider">    
+                <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <li class="splide__slide">
+                                  <img src="./images/g664.png" class="img-frame" alt="">
+                              </li>
+                              <li class="splide__slide">
+                                  <img src="./images/s-blob-v1-IMAGE-5cVKdtICDIQ.jpeg" class="img-frame" alt="">
+                              </li>
+                              <li class="splide__slide">
+                                  <img src="./images/s-blob-v1-IMAGE-Y4kuViXuHTo.jpeg" class="img-frame" alt="">
+                              </li>
+                          </ul>
+                    </div>
+                </section>
             </div>
             <div class="logo">
-                <img src="./images/g382.png" alt="">
+                <img data-aos="flip-right" src="./images/g382.png" alt="">
             </div>
-            <p class="location-text">“AT THE TIME OF MEETING THE RIGHT PEOPLE, </br>NOT A STRONG VIBRATION BUT A LIFETIME OF PEACE”</p>
+            <p data-aos="fade-up" class="location-text">“AT THE TIME OF MEETING THE RIGHT PEOPLE, </br>NOT A STRONG VIBRATION BUT A LIFETIME OF PEACE”</p>
         </section>
 
         <!-- 4. Timeline -->
         <section class="timeline">
-            <h2>Timeline</h2>
+            <h2 data-aos="fade-down">Timeline</h2>
             <div class="timeline-list">
                 <div class="timeline-item">
-                    <span class="hour item">15:30</span>
+                    <span data-aos="fade-right" class="hour item">15:30</span>
                     <div class="dot-icon-box item">
-                        <div class="dot-icon"></div>
+                        <div data-aos="fade-right" class="dot-icon"></div>
                     </div>
                     <div class="image-icon">
-                        <img src="./images/g230.png" style="width: 30px !important;" alt="">
+                        <img data-aos="fade-right" src="./images/g230.png" style="width: 30px !important;" alt="">
                     </div>
-                    <p class="title item">Đón khách</p>
+                    <p data-aos="fade-right" class="title item">Đón khách</p>
                 </div>
                 <div class="timeline-item">
-                    <span class="hour item">16:00</span>
+                    <span data-aos="fade-right" data-aos-delay="500" class="hour item">16:00</span>
                     <div class="dot-icon-box item">
-                        <div class="dot-icon"></div>
+                        <div data-aos="fade-right" data-aos-delay="500" class="dot-icon"></div>
                     </div>
                     <div class="image-icon">
-                        <img src="./images/gate.png" alt="">
+                        <img data-aos="fade-right" data-aos-delay="500" src="./images/gate.png" alt="">
                     </div>
-                    <p class="title item">Lễ vows</p>
+                    <p data-aos="fade-right" data-aos-delay="500" class="title item">Lễ vows</p>
                 </div>
                 <div class="timeline-item">
-                    <span class="hour item">16:30</span>
+                    <span data-aos="fade-right" data-aos-delay="1000" class="hour item">16:30</span>
                     <div class="dot-icon-box item">
-                        <div class="dot-icon"></div>
+                        <div data-aos="fade-right" data-aos-delay="1000" class="dot-icon"></div>
                     </div>
                     <div class="image-icon item">
-                        <img src="./images/camera.png" alt="">
+                        <img data-aos="fade-right" data-aos-delay="1000" src="./images/camera.png" alt="">
                     </div>
-                    <p class="title item">Chụp hình</p>
+                    <p data-aos="fade-right" data-aos-delay="1000" class="title item">Chụp hình</p>
                 </div>
                 <div class="timeline-item">
-                    <span class="hour item">17:30</span>
+                    <span data-aos="fade-right" data-aos-delay="1500" class="hour item">17:30</span>
                     <div class="dot-icon-box item">
-                        <div class="dot-icon"></div>
+                        <div  data-aos="fade-right" data-aos-delay="1500" class="dot-icon"></div>
                     </div>
                     <div class="image-icon item">
-                        <img src="./images/eats.png" alt="">
+                        <img  data-aos="fade-right" data-aos-delay="1500" src="./images/eats.png" alt="">
                     </div>
-                    <p class="title item">Tiệc tối</p>
+                    <p  data-aos="fade-right" data-aos-delay="1500" class="title item">Tiệc tối</p>
                 </div>
                 <div class="timeline-item">
-                    <span class="hour item">19:00</span>
+                    <span data-aos="fade-right" data-aos-delay="2000" class="hour item">19:00</span>
                     <div class="dot-icon-box item">
-                        <div class="dot-icon"></div>
+                        <div data-aos="fade-right" data-aos-delay="2000" class="dot-icon"></div>
                     </div>
                     <div class="image-icon item">
-                        <img src="./images/cake.png" alt="">
+                        <img data-aos="fade-right" data-aos-delay="2000" src="./images/cake.png" alt="">
                     </div>
-                    <p class="title item">Cắt bánh</p>
+                    <p data-aos="fade-right" data-aos-delay="2000" class="title item">Cắt bánh</p>
                 </div>
                 <div class="timeline-item">
-                    <span class="hour item">20:00</span>
+                    <span data-aos="fade-right" data-aos-delay="2500" class="hour item">20:00</span>
                     <div class="dot-icon-box item">
-                        <div class="dot-icon"></div>
+                        <div data-aos="fade-right" data-aos-delay="2500" class="dot-icon"></div>
                     </div>
                     <div class="image-icon item">
-                        <img src="./images/party.png" alt="">
+                        <img data-aos="fade-right" data-aos-delay="2500" src="./images/party.png" alt="">
                     </div>
-                    <p class="title item">Party time</p>
+                    <p data-aos="fade-right" data-aos-delay="2500" class="title item">Party time</p>
                 </div>
             </div>
         </section>
@@ -131,32 +152,32 @@
             <div class="box-leaf-icon">
                 <img src="./images/g604.png" class="leaf-icon" alt="">
             </div>
-            <h2 class="title">Dresscode</h2>
-            <p class="dresscode-text">“VUI LÒNG KHÔNG MẶC TRANG PHỤC MÀU TRẮNG”</p>
+            <h2 data-aos="fade-down" class="title">Dresscode</h2>
+            <p data-aos="fade-up" class="dresscode-text">“VUI LÒNG KHÔNG MẶC TRANG PHỤC MÀU TRẮNG”</p>
             <div class="dresscode-list">
                 <div class="dresscode-item">
                     <div class="image-icon">
-                        <img src="./images/green-leaf.png" alt="">
+                        <img data-aos="zoom-in-down" src="./images/green-leaf.png" alt="">
                     </div> 
-                    <p class="icon-title">Xanh lá</p>
+                    <p data-aos="fade-right" class="icon-title">Xanh lá</p>
                 </div>
                 <div class="dresscode-item">
                     <div class="image-icon">
-                        <img src="./images/pink-leaf.png" alt="">
+                        <img data-aos="zoom-in-down" data-aos-delay="300" src="./images/pink-leaf.png" alt="">
                     </div>
-                    <p class="icon-title">Hồng</p>
+                    <p data-aos="fade-right" data-aos-delay="300" class="icon-title">Hồng</p>
                 </div>
                 <div class="dresscode-item">
                     <div class="image-icon">
-                        <img src="./images/brown-leaf.png" alt="">
+                        <img data-aos="zoom-in-down" data-aos-delay="600" src="./images/brown-leaf.png" alt="">
                     </div>
-                    <p class="icon-title">Nâu</p>
+                    <p data-aos="fade-right" data-aos-delay="600" class="icon-title">Nâu</p>
                 </div>
                 <div class="dresscode-item">
                     <div class="image-icon">
-                        <img src="./images/burgundy-leaf.png" alt="">
+                        <img data-aos="zoom-in-down" data-aos-delay="900" src="./images/burgundy-leaf.png" alt="">
                     </div>
-                    <p class="icon-title">Đỏ đô</p>
+                    <p  data-aos="fade-right" data-aos-delay="900" class="icon-title">Đỏ đô</p>
                 </div>
             </div>
         </section>
@@ -167,15 +188,15 @@
                 <div class="box-leaf-icon">
                     <img src="./images/g604.png" class="leaf-icon" alt="">
                 </div>
-                <h2 class="rsvp-title">Xác nhận tham dự</h2>
-                <p class="rsvp-text">HÃY DÀNH CHÚT THỜI GIAN ĐỂ XÁC NHẬN SỰ THAM DỰ CỦA BẠN<strong> TRƯỚC NGÀY 25.10.2025 </strong>NHÉ</p>
-                <hr class="timeline-line" />
-                <form id="rsvp-form">
+                <h2 data-aos="fade-left" class="rsvp-title">Xác nhận tham dự</h2>
+                <p data-aos="fade-right" class="rsvp-text">HÃY DÀNH CHÚT THỜI GIAN ĐỂ XÁC NHẬN SỰ THAM DỰ CỦA BẠN<strong> TRƯỚC NGÀY 25.10.2025 </strong>NHÉ</p>
+                <hr data-aos="fade-left" class="timeline-line" />
+                <form data-aos="fade-up" id="rsvp-form">
                     <div class="form-group form-group-confirm">
                         <input type="radio" class="confirm" id="confirm-yes" name="confirm" />
                         <label for="confirm-yes" class="radio-button confirm-yes">Sẽ có mặt</label>
                         <input type="radio" class="confirm" id="confirm-no" name="confirm" />
-                        <label for="confirm-no" class="radio-button confirm-no">Xin lỗi, không thể tham dự</label>
+                        <label for="confirm-no" id="confirm-no-label" class="radio-button confirm-no">Xin lỗi, không thể tham dự</label>
                     </div>
                     <div class="form-group">
                         <input type="text" class="name input-text" id="name" name="name" placeholder="Tên của bạn" required />
@@ -201,16 +222,16 @@
 
         <!-- 7. Extra Info -->
         <section class="extra-info">
-            <h2>Khám phá Buôn Ma Thuột</h2>
-            <p class="p-1">“Buôn Ma Thuột có cà phê, và giờ có luôn... đám cưới của tụi mình”</p>
-            <p class="p-2">Chuyện tình của chúng mình bắt đầu từ <strong>Buôn Ma Thuột</strong> - Thành phố của nắng và gió. Giữa phố núi 
+            <h2 data-aos="fade-down">Khám phá Buôn Ma Thuột</h2>
+            <p data-aos="fade-left" class="p-1">“Buôn Ma Thuột có cà phê, và giờ có luôn... đám cưới của tụi mình”</p>
+            <p data-aos="fade-right" class="p-2">Chuyện tình của chúng mình bắt đầu từ <strong>Buôn Ma Thuột</strong> - Thành phố của nắng và gió. Giữa phố núi 
                 bình yên, chúng mình đã tìm thấy nhau và kể từ đó, nơi đây trở thành nơi lưu giữ những kỷ niệm 
                 đẹp nhất trong hành trình tình yêu của chúng mình.</p>
-            <p class="p-3">Nếu có dịp đến dự đám cưới, bạn đừng quên thưởng thức ẩm thực đặc sản, khám phá những địa 
+            <p data-aos="fade-left" class="p-3">Nếu có dịp đến dự đám cưới, bạn đừng quên thưởng thức ẩm thực đặc sản, khám phá những địa 
                 điểm nổi tiếng, hay đơn giản chỉ dạo quanh những con đường nơi đây, tất cả sẽ khiến bạn yêu 
                 thành phố này ngay từ lần đầu. Thế nên, nhớ tới chung vui và trải nghiệm cho hết nha, kẻo về lại 
                 muốn quay lại liền đó! <strong>Dưới đây, chúng mình có vài gợi ý cho bạn.</strong></p>
-            <div class="accordion-container">
+            <div data-aos="fade-up" class="accordion-container">
                 <table class="accordion-table">
                     <tbody>
                         <!-- Item 1: THAM QUAN -->
@@ -226,9 +247,9 @@
                                     <div class="content-cell">
                                         <div class="content-text">
                                             <ul>
-                                                <li><a href="">Bảo tàng Thế Giới Cà Phê</a></li>
-                                                <li><a href="">Thác Đray Nur</a></li>
-                                                <li><a href="">Sêrêpốk Essence</a></li>
+                                                <li><a href="https://maps.app.goo.gl/nmxRFLpLYfe3xdmK9?g_st=ipc">Bảo tàng Thế giới Cà phê</a></li>
+                                                <li><a href="https://maps.app.goo.gl/hxU5jrWFbd35hjd89?g_st=ipc">Thác Đray Nur</a></li>
+                                                <li><a href="https://maps.app.goo.gl/tX5LGNDMo5bYigLaA?g_st=ipc">Sêrêpốk Essence</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -249,15 +270,15 @@
                                     <div class="content-cell">
                                         <div class="content-text">
                                             <ul>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
+                                                <li><a href="https://maps.app.goo.gl/x4qXWbL9m8TRm4Hr6?g_st=ipc">Tiệm Mì Tùng Phú</a></li>
+                                                <li><a href="https://maps.app.goo.gl/mtke9EZE1uBgwR7Y6?g_st=ipc">Bún thịt nướng - Bún riêu</a></li>
+                                                <li><a href="https://maps.app.goo.gl/duaszs7KEmdZV1F86?g_st=ipc">Bún Riêu Đoàn Kết</a></li>
+                                                <li><a href="https://maps.app.goo.gl/pjVWNjG1sZfb111w5?g_st=ipc">BÚN GIÒ CHÌA BÀ MÔ</a></li>
+                                                <li><a href="https://maps.app.goo.gl/QdAWhzAkMboFXKa47?g_st=ipc">Bánh Canh Bà Già</a></li>
+                                                <li><a href="https://maps.app.goo.gl/4rZSmXx3mDHKhB9W9?g_st=ipc">Phở khô 2 tô Gia Lai</a></li>
+                                                <li><a href="https://maps.app.goo.gl/PTgadDLVWkdnUuPR8?g_st=ipc">Quán Ăn Cô Khang</a></li>
+                                                <li><a href="https://maps.app.goo.gl/FBeqZeq2jvBFNd6B6?g_st=ipc">Phở Chị Ba</a></li>
+                                                <li><a href="https://maps.app.goo.gl/ozrTbToDx6ZMc45e9?g_st=ipc">Bún Bò Giò Huế Nhân Mập</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -278,15 +299,10 @@
                                     <div class="content-cell">
                                         <div class="content-text">
                                             <ul>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
+                                                <li><a href="https://maps.app.goo.gl/H2LAVX3wwaE7EeQi8?g_st=ipc">Bánh canh cá Dằm Hương</a></li>
+                                                <li><a href="https://maps.app.goo.gl/CL7NgQmff8GV9zBm8?g_st=ipc">Cơm lam gà nướng Kiều Thy</a></li>
+                                                <li><a href="https://maps.app.goo.gl/af7QbbdxspYkLdQr6?g_st=ipc">Bún riêu - bún đỏ cô Tùng</a></li>
+                                                <li><a href="https://maps.app.goo.gl/avbKycPi2WosN4Xm9?g_st=ipc">Mì Hoành Thánh</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -307,15 +323,18 @@
                                     <div class="content-cell">
                                         <div class="content-text">
                                             <ul>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
+                                                <li><a href="https://maps.app.goo.gl/eMgeABvgzsZfxxA98?g_st=ipc">Kem Flanc Yaourt Cafe</a></li>
+                                                <li><a href="https://maps.app.goo.gl/dNyes4pvyxgD4zZv9?g_st=ipc">Quán Bánh Khọt 106</a></li>
+                                                <li><a href="https://maps.app.goo.gl/9Y5sbstSYWYuRkJv8?g_st=ipc">Nem Nướng Thanh Hùng</a></li>
+                                                <li><a href="https://maps.app.goo.gl/snmndp3sCyAXbEkN8?g_st=ipc">Chè 57</a></li>
+                                                <li><a href="https://maps.app.goo.gl/YxSWRN1mAvEZyVkq9?g_st=ipc">Ăn Vặt Nhóp Nhép BMT</a></li>
+                                                <li><a href="https://maps.app.goo.gl/37VMgeGg4BGHhn4BA?g_st=ipc">Bánh Xèo Số 16</a></li>
+                                                <li><a href="https://maps.app.goo.gl/hPmJv9UdpsaUzoAy5?g_st=ipc">Ốc 78</a></li>
+                                                <li><a href="https://maps.app.goo.gl/i6H1jARkWuxjQVZc8?g_st=ipc">Bánh Ướt Thịt Nướng 45</a></li>
+                                                <li><a href="https://maps.app.goo.gl/1VfRP4izZLc8hBxb7?g_st=ipc">Bông lan trứng muối</a></li>
+                                                <li><a href="https://maps.app.goo.gl/K9aB4Mf1RTLkP8ht7?g_st=ipc">Bánh bột lọc Cô Quý</a></li>
+                                                <li><a href="https://maps.app.goo.gl/UpVpMCgCRTFPLESM8?g_st=ipc">Gỏi Khô Bò</a></li>
+                                                <li><a href="https://maps.app.goo.gl/YqenH185eY9ce5HS6?g_st=ipc">Bánh bột lọc Huế Thanh Nga - Đạt Lý</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -336,15 +355,18 @@
                                     <div class="content-cell">
                                         <div class="content-text">
                                             <ul>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
+                                                <li><a href="https://maps.app.goo.gl/1o5uAWFhWaZ9b1118?g_st=ipc">Fa Coffee</a></li>
+                                                <li><a href="https://maps.app.goo.gl/o1Lkjsu4qkHVf65CA?g_st=ipc">Bơ Đường Bột Sữa</a></li>
+                                                <li><a href="https://maps.app.goo.gl/Gg4F4jUCoHHyAvna6?g_st=ipc">Rừng Gốm</a></li>
+                                                <li><a href="https://maps.app.goo.gl/AQkD5Nm7w2ejXkCB7?g_st=ipc">TT HOUSE</a></li>
+                                                <li><a href="https://maps.app.goo.gl/B75TUwk8NtoCLjHK6?g_st=ipc">Horizon cafe & Restaurant</a></li>
+                                                <li><a href="https://maps.app.goo.gl/jZYGfmMgnFVhfkjS6?g_st=ipc">Cà Mê Cafee</a></li>
+                                                <li><a href="https://maps.app.goo.gl/URPL2CsxmJPMzD8C8?g_st=ipc">Thái Phúc Tea</a></li>
+                                                <li><a href="https://maps.app.goo.gl/h1TFR1La93n1YxbU9?g_st=ipc">Cà Phê Kem Gold</a></li>
+                                                <li><a href="https://maps.app.goo.gl/UP19patZPtWujvem7?g_st=ipc">Trà sữa Thân</a></li>
+                                                <li><a href="https://maps.app.goo.gl/eRTuFFR2GTt9mBUR9?g_st=ipc">TENDERLY BAR</a></li>
+                                                <li><a href="https://maps.app.goo.gl/hC542cXi653VtUj99?g_st=ipc">Heli Coffee</a></li>
+                                                <li><a href="https://maps.app.goo.gl/up1Ncbsz883cMKQp9?g_st=ipc">Nhà Cà Phê Sữa & Studio</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -365,11 +387,8 @@
                                     <div class="content-cell">
                                         <div class="content-text">
                                             <ul>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Bún thịt nướng - Bún riêu</a></li>
-                                                <li><a href="">Bún Riêu Đoàn Kết</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
-                                                <li><a href="">Tiệm Mì Tùng Phú</a></li>
+                                                <li><a href="https://maps.app.goo.gl/HQUvqH8oBGhgabEx6?g_st=ipc">GẠO TẤM</a></li>
+                                                <li><a href="https://maps.app.goo.gl/yeRsffo6CgwEXKAM7?g_st=ipc">Thaomeoz</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -379,8 +398,8 @@
                     </tbody>
                 </table>
             </div>
-            <p class="p-4">“Hẹn gặp nhau tại Buôn Ma Thuột để cùng cười, cùng ăn và cùng chứng kiến tình yêu của chúng mình!”</p>
-            <h3 class="end-title">Hẹn gặp bạn!</h3>
+            <p data-aos="flip-right" class="p-4">“Hẹn gặp nhau tại Buôn Ma Thuột để cùng cười, cùng ăn và cùng chứng kiến tình yêu của chúng mình!”</p>
+            <h3 data-aos="fade-up" class="end-title">Hẹn gặp bạn!</h3>
         </section>
     </div>
     <script>
@@ -446,6 +465,27 @@
         //         }
         //     });
         // });
+
+        function updatePlaceholder() {
+            const attr = document.getElementById("confirm-no-label");
+
+            if (window.innerWidth < 540) {
+                attr.textContent = "Không thể tham dự";
+            } else {
+                attr.textContent = "Xin lỗi, không thể tham dự";
+            }
+        }
+
+        // chạy khi load trang
+        updatePlaceholder();
+
+        // chạy khi resize màn hình
+        window.addEventListener("resize", updatePlaceholder);
+    </script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+          new Splide( '#image-carousel' ).mount();
+        } );
     </script>
 </body>
 
