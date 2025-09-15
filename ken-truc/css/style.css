@@ -256,7 +256,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-image: url('../anh/core/Cici3697.jpg');
+    background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -838,7 +838,7 @@ input::placeholder, textarea::placeholder{
 }
 
 .end{
-    background-image: url('../anh/core/Cici3689.jpg');
+    background-image: url('https://drive.google.com/thumbnail?id=1ZHZf7i7evTbWkASp6IncMixJwZsVSV5w&sz=w1000');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
