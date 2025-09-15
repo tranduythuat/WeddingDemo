@@ -8,6 +8,14 @@
 }
 
 @font-face {
+    font-family: 'Lora Regular';
+    src: url('Lora-Regular.woff2') format('woff2'),
+        url('Lora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Lora';
     src: url('.../fonts/Lora-Italic.woff2') format('woff2'),
         url('../fonts/Lora-Italic.woff') format('woff');
@@ -229,7 +237,7 @@
 }
 
 .container{
-    width: 480px;
+    width: 414px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -251,52 +259,62 @@
 }
 
 .box-contop{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: auto;
+    /* background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000'); */
+    /* background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000'); */
+    background-image: url('../anh/g196.png'), url('../anh/path194.png');
+    background-position: center, center;
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
     color: #fff;
+    text-align: center;
+    /* padding-top: 52px; */
 }
 
 .img-top{
-    width: 15%;
-    margin: 50px 0 500px;
+    width: 10%;
+    padding-top: 35px;
 }
 
 .box-dot{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+    padding-top: 350px;
 }
 
 
 .dot{
     font-size: 3px;
     margin: 0 5px;
+    display: inline-block;
+    align-self: center;
 }
 
 .lb-top{
+    display: inline-block;
+    align-self: center;
+    
     font-family: var(--font-pinyon);
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .lb-top2{
-    font-family: var(--font-lora);
-    font-size: .8em;
+    display: block;
+    font-family: 'Lora Regular', sans-serif;
+    font-size: .6em;
     font-weight: 300;
     letter-spacing: 1px;
 }
 
 .lb-top3{
+    display: block;
     font-family: var(--font-pinyon);
     font-size: 1.8em;
     font-weight: 300;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 
@@ -341,6 +359,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.box-map {
+    padding: 0 48px;
 }
 
 .kinhmoi{
@@ -402,6 +424,12 @@
     color: var(--primary-color);
 }
 
+.box-timeline, .timeline-top {
+    margin: 0 92px;
+    display: flex;
+    text-align: center;
+}
+
 .lb-timeline1{
     font-family: var(--font-pinyon);
     font-size: 2em;
@@ -456,6 +484,7 @@
     font-size: .5em;
     letter-spacing: .5px;
     word-spacing: .5px;
+    width: 60%;
 }
 
 .box-dresscon, .box-nam, .box-nu{
@@ -676,6 +705,7 @@ form .logo {
     font-size: .65em;
     font-weight: 300;
     word-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
@@ -780,7 +810,10 @@ background-color: var(--primary-color);
     font-family: var(--font-lora);
     margin: 10px 0 0;
     }
-    
+    .box-ten textarea {
+        width: 350px;
+    }
+
     .inp-ten{
     width: 350px;
     height: 30px;
@@ -838,8 +871,10 @@ input::placeholder, textarea::placeholder{
 }
 
 .end{
+    width: 100%;
+    height: auto;
     background-image: url('https://drive.google.com/thumbnail?id=1ZHZf7i7evTbWkASp6IncMixJwZsVSV5w&sz=w1000');
-    background-position: top;
+    background-position: centerq;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -848,14 +883,7 @@ input::placeholder, textarea::placeholder{
     justify-content: center;
     text-align: center;
     color: var(--primary-color);
-    padding-top: 180px;
-}
-
-.lb-end{
-    font-family: var(--font-lora);
-    font-size: .6em;
-    margin: 50px 0 100px;
-    letter-spacing: 1px;
+    padding-top: 90px;
 }
 
 .img-qr{
@@ -865,20 +893,27 @@ input::placeholder, textarea::placeholder{
 
 .lb-thank{
     font-family: var(--font-pinyon);
-    font-size: 3em;
+    font-size: 35px;
     margin-bottom: -40px;
 }
 
 .lb-end{
     font-family: var(--font-lora);
+    font-size: .6em;
+    letter-spacing: 1px;
+    font-family: var(--font-lora);
     line-height: 20px;
+    padding-top: 46px;
+    width: 80%;
+    text-transform: uppercase;
 }
 
 
 .yen{
     font-family: var(--font-lora);
     font-size: .6em;
-    margin-bottom: 50px;
+    padding-bottom: 10px;
+    padding-top: 100px;
 }
 
 
