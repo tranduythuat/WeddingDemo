@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quang & Ngoc</title>
 
+    <meta property="og:image" content="https://drive.google.com/thumbnail?id=13sLryV1KTXzIdZQFeN3VnGfqTTRn0r3P&sz=w1000" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="300" />
+
+    <!-- Các thông tin khác cho Open Graph -->
+    <meta property="og:title" content="Quang & Ngoc" />
+    <meta property="og:description" content="Quang & Ngoc" />
+    <meta property="og:url" content="https://yenstudio.com.vn/quang-ngpc/thiepmoi.html" />
+    <meta property="og:type" content="website" />
+
     <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
 
@@ -56,7 +66,7 @@
             <p data-aos="fade-up" class="location-address">
                 123 Phường Trần Nhật Duật, TP. Buôn Ma Thuột
             </p>
-            <a data-aos="flip-up" href="#" class="btn shake-top">MAPS</a>
+            <a data-aos="flip-up" href="https://maps.app.goo.gl/XX4JyEqXgStPuCaP8?g_st=ipc" class="btn shake-top">MAPS</a>
             <div class="location-image location-slider">    
                 <section id="image-carousel" class="splide" aria-label="Beautiful Images">
                     <div class="splide__track">
@@ -182,7 +192,48 @@
             </div>
         </section>
 
-        <!-- 6. RSVP -->
+        <!-- 5. Album -->
+         
+        <section id="album" class="album">
+            <section id="main-carousel" class="splide" aria-label="The carousel with thumbnails">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7168.JPG">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7169.JPG">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7170.JPG">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7174.JPG">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7178.JPG">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7195.JPG">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7222.JPG">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7248.JPG">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7252.JPG">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="./images/wedding/IMG_7282.JPG">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <!-- 7. RSVP -->
         <section class="rsvp">
             <div class="rsvp-container">
                 <div class="box-leaf-icon">
@@ -220,7 +271,7 @@
             </div>
         </section>
 
-        <!-- 7. Extra Info -->
+        <!-- 8. Extra Info -->
         <section class="extra-info">
             <h2 data-aos="fade-down">Khám phá Buôn Ma Thuột</h2>
             <p data-aos="fade-left" class="p-1">“Buôn Ma Thuột có cà phê, và giờ có luôn... đám cưới của tụi mình”</p>
@@ -451,21 +502,6 @@
             }
         }
 
-        // Thêm hiệu ứng hover cho các row
-        // document.querySelectorAll('.accordion-header').forEach(header => {
-        //     header.addEventListener('mouseenter', function() {
-        //         if (!this.classList.contains('active')) {
-        //             this.style.backgroundColor = '#d8d8d8';
-        //         }
-        //     });
-            
-        //     header.addEventListener('mouseleave', function() {
-        //         if (!this.classList.contains('active')) {
-        //             this.style.backgroundColor = '#e8e8e8';
-        //         }
-        //     });
-        // });
-
         function updatePlaceholder() {
             const attr = document.getElementById("confirm-no-label");
 
@@ -484,8 +520,23 @@
     </script>
     <script>
         document.addEventListener( 'DOMContentLoaded', function () {
-          new Splide( '#image-carousel' ).mount();
-        } );
+            new Splide( '#image-carousel', {
+
+                updateOnMove: true,
+                type        : 'loop',
+                perPage     : 1,
+                perMove     : 1,
+                focus       : 'center',
+            }).mount();
+
+            new Splide( '#main-carousel', {
+                updateOnMove: true,
+                type        : 'loop',
+                perPage     : 1,
+                perMove     : 1,
+                focus       : 'center',
+            }).mount();
+        });
     </script>
 </body>
 
