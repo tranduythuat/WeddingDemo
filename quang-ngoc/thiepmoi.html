@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -452,7 +452,47 @@
             <p data-aos="flip-right" class="p-4">“Hẹn gặp nhau tại Buôn Ma Thuột để cùng cười, cùng ăn và cùng chứng kiến tình yêu của chúng mình!”</p>
             <h3 data-aos="fade-up" class="end-title">Hẹn gặp bạn!</h3>
         </section>
+        <button class="player" id="player-btn" aria-label="Play/Pause">
+            <img id="iconSvg" src="./images/cd.png" alt="Music Icon">
+        </button>
+        <audio id="audio" preload="auto" src="./music/Can't take my eyes of you _ Aesthetic Lyrics [VbevKoUlCgE].mp3" type="audio/mpeg"></audio>
     </div>
+    <script>
+        const btn = document.getElementById('player-btn');
+        const audio = document.getElementById('audio');
+        const iconPath = document.getElementById('playPath');
+        const iconSvg = document.getElementById('iconSvg');
+
+        function setPauseIcon(){
+            iconPath.setAttribute('d','M6 5h4v14H6zM14 5h4v14h-4z');
+        }
+        function setPlayIcon(){
+            iconPath.setAttribute('d','M6 4.5v15l13-7.5L6 4.5z');
+        }
+
+        function toggle(){
+            if(!audio.src){
+                alert('Chưa có nhạc, vui lòng thêm src cho audio.');
+                return;
+            }
+            if(audio.paused){
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        btn.addEventListener('click',toggle);
+
+        audio.addEventListener('play',()=>{
+            iconSvg.classList.add('spin');
+            setPauseIcon();
+        });
+        audio.addEventListener('pause',()=>{
+            iconSvg.classList.remove('spin');
+            setPlayIcon();
+        });
+    </script>
     <script>
         AOS.init({
             disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
