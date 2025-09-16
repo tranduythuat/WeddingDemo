@@ -438,7 +438,7 @@
 }
 
 .box-timeline, .timeline-top {
-    margin: 0 92px;
+    margin: 0 60px;
     display: flex;
     text-align: center;
 }
@@ -970,7 +970,7 @@ input::placeholder, textarea::placeholder{
 }
 
 .invitation-card .monogram {
-    padding-top: 62px;
+    padding-top: 86px;
 }
 
 .invitation-card .save-date,
@@ -983,7 +983,7 @@ input::placeholder, textarea::placeholder{
 }
 
 .invitation-card .save-date {
-    padding-top: 120px;
+    padding-top: 86px;
 }
 
 .invitation-card .celebration-text {
@@ -1113,6 +1113,7 @@ input::placeholder, textarea::placeholder{
     }
     .kinhmoi{
         font-size: .6em;
+        width: 60%;
     }
     textarea {
         width: 90%;
