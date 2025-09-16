@@ -386,7 +386,7 @@
     font-family: var(--font-lora);
     text-transform: uppercase;
     font-size: .5em;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     margin-bottom: 5px;
 }
 
