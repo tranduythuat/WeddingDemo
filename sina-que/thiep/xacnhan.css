@@ -501,6 +501,7 @@ hr{
   justify-content: space-between; 
   height: 148px;     
   padding: 5px;
+  padding-bottom: 15px;
   /* align-items: stretch;       */
 }
 
@@ -1506,7 +1507,7 @@ textarea{
     width: 300px;
   }
   .box-timeline .events .event {
-    height: 158px;
+    height: 143px;
   }
 }
 
