@@ -43,6 +43,13 @@
 }
 
 @font-face {
+    font-family: 'UVNKe Chuyen3';
+    src: url('../fonts/UVN Ke Chuyen3.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Lora';
     src: url('../fonts/Lora-Regular.woff2') format('woff2'),
         url('../fonts/Lora-Regular.woff') format('woff');
@@ -78,6 +85,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'SVG-Gotham';
+    src: url('../fonts/SVN-Gotham.svg') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 
@@ -916,8 +929,86 @@ input::placeholder, textarea::placeholder{
     padding-top: 100px;
 }
 
+/* invitation-card */
+.invitation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #fbf8e9ff;
+}
+.invitation-card {
+    background-image: url('../anh/g908.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 98% auto;
+    max-width: 100%;
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.invitation-card .header-text {
+    font-family: "UVNKe Chuyen3", sans-serif;
+    font-size: 0.73rem;
+    font-weight: normal;
+    color: #232916ff;
+    padding-top: 100px;
+}
 
+.invitation-card .names-section {
+    font-family: "Pinyon Script", sans-serif;
+    font-size: 1.9rem;
+    font-weight: normal;
+    color: var(--header-color);
+    padding-top: 10px;
+}
 
+.invitation-card .monogram {
+    padding-top: 62px;
+}
+
+.invitation-card .save-date,
+.invitation-card .celebration-text {
+    font-family: "SVG-Gotham", sans-serif;
+    font-size: 0.5rem;
+    font-weight: normal;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.invitation-card .save-date {
+    padding-top: 120px;
+}
+
+.invitation-card .celebration-text {
+    padding-top: 8px;
+}
+
+.invitation-card .buttons-section {
+    padding-top: 25px;
+    padding-bottom: 150px;
+}
+
+.invitation-card .invitation-button {
+    font-family: "SVG-Gotham", sans-serif;
+    font-size: 0.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--header-color);
+    border-radius: 50px;
+    box-shadow: 0 4px 14px rgba(159, 122, 234, 0.3);
+    display: inline-block;
+    padding: 3px 24px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid var(--header-color);
+    min-width: 150px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
 /* Đảm bảo box-circle luôn cố định và không ảnh hưởng đến nội dung trang */
 .box-circle {
