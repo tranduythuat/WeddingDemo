@@ -487,17 +487,21 @@ hr{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 50px 0;
 }
 
 .box-timeline .events .event {
   width: 100%;
+  flex: 25%;
   display: flex;
   text-align: center;
+  align-items: center;
   flex-direction: column;   
   justify-content: space-between; 
-  height: 170px;     
-  padding: 15px;
+  height: 148px;     
+  padding: 5px;
+  padding-bottom: 15px;
   /* align-items: stretch;       */
 }
 
@@ -1503,7 +1507,7 @@ textarea{
     width: 300px;
   }
   .box-timeline .events .event {
-    height: 150px;
+    height: 143px;
   }
 }
 
