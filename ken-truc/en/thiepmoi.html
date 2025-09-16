@@ -172,7 +172,7 @@
             </div>
 
          
-            <form action="" name="chien-diem">
+            <form action="" name="ken-truc">
                 <div class="logo">
                     <div class="box-flow">
                         <img src="../anh/logo.png" alt="" class="">
@@ -186,20 +186,19 @@
                 </div>
     
                 <div class="container-check">
-                    <input class="box-feed" type="radio" value="CÓ" id="yes" name="XÁC NHẬN">
+                    <input class="box-feed" type="radio" value="yes" id="yes" name="CONFIRM">
                     <label class="check-box" for="yes">
                         <h3 class="til-check">YES</h3>
                     </label>
-                    <input class="box-feed" type="radio" value="KHÔNG" id="no" name="XÁC NHẬN">
+                    <input class="box-feed" type="radio" value="no" id="no" name="CONFIRM">
                     <label class="check-box" for="no"> 
                         <h3 class="til-check">NO</h3>
                     </label>
                 </div>
                 
                 <div class="box-ten">
-                    <input required class="inp-ten" type="text"  name="TÊN" placeholder="Name">
-                    <input required class="inp-ten" type="text" name="SỐ KHÁCH" placeholder="Number of Attendance" maxlength="1" title="Please enter 1 correct digit" pattern="\d" />
-
+                    <input required class="inp-ten" type="text"  name="NAME" placeholder="Name">
+                    <input required class="inp-ten" type="text" name="GUEST" placeholder="Number of Attendance" maxlength="1" title="Please enter 1 correct digit" pattern="\d" />
                 </div>
 
                 <!-- <div class="box-label">
@@ -216,7 +215,7 @@
                     </label>
                 </div> -->
                 <div class="box-ten">
-                    <textarea id="loi-chuc" name="LỜI CHÚC" rows="4" cols="50" placeholder="Write a wish for the bride and groom"></textarea>
+                    <textarea id="loi-chuc" name="WISH" rows="4" cols="50" placeholder="Write a wish for the bride and groom"></textarea>
                 </div>
                 <div class="wrapper">
                     <button class="xacnhan" type="submit">CONFIRM</button>
@@ -278,18 +277,25 @@
 
     </script>
 <script>
-       const scriptURL = 'https://script.google.com/macros/s/AKfycbxegZYDLzB7xP_XeHohRl0wBa-L_Xrq1LbF5Lqjqiu5UafSxNp8cnoI0vBy8sKOodtn/exec';
-        const form = document.forms['chien-diem'];
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxgPMaOgT_WwTpxvhDfLMLvpG27EO9cTFebhACu-UbEqWjmou1cCU0sYa0urgECblui/exec?sheet=en';
+        const form = document.forms['ken-truc'];
 
         form.addEventListener('submit', e => {
             e.preventDefault(); // Ngừng việc gửi form mặc định
 
             document.getElementById('loading-container').style.display = 'flex';
 
+            let formData = new FormData(form);
+            let data = Object.fromEntries(formData.entries());
+            const confirm = data.CONFIRM;
+            const name = data.NAME;
+            const number_guest = data.GUEST;
+            const wish = data.WISH;
+
             // Gửi dữ liệu form đi
             fetch(scriptURL, {
                 method: 'POST',
-                body: new FormData(form)
+                body:  new URLSearchParams({name, confirm, number_guest, wish})
             })
                 .then(response => {
                     if (response.ok) {
@@ -299,11 +305,11 @@
                         document.getElementById('loading-container').style.display = 'none';
 
                         Swal.fire({
-                            title: 'Thành công',
-                            text: 'Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nhaa <3',
+                            title: 'Success!',
+                            text: 'Thank you for your feedback, the information has been sent to the bride and groom!!',
                             imageWidth: 300,
                             imageHeight: 200,
-                            confirmButtonText: 'ĐÓNG',
+                            confirmButtonText: 'Close',
                             background: '#f8f8f8',
                             padding: '20px',
                             customClass: {
@@ -323,7 +329,7 @@
 
                         Swal.fire({
                             title: 'Oops!',
-                            text: 'Lỗi mất rồi thử lại giúp chúng mình nhé',
+                            text: 'Error lost, please try again for us!',
                             icon: 'error',
                             confirmButtonText: 'OK'
                         });
@@ -337,7 +343,7 @@
 
                     Swal.fire({
                         title: 'Oops!',
-                        text: 'Lỗi mất rồi thử lại giúp chúng mình nhé',
+                        text: 'Error lost, please try again for us!',
                         icon: 'error',
                         confirmButtonText: 'OK'
                     });

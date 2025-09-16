@@ -173,7 +173,7 @@
             </div>
 
          
-            <form action="" name="chien-diem">
+            <form action="" name="ken-truc">
                 <div class="logo">
                     <div class="box-flow">
                         <img src="../anh/logo.png" alt="" class="">
@@ -187,19 +187,19 @@
                 </div>
     
                 <div class="container-check">
-                    <input class="box-feed" type="radio" value="CÓ" id="yes" name="XÁC NHẬN">
+                    <input class="box-feed" type="radio" value="yes" id="yes" name="CONFIRM">
                     <label class="check-box" for="yes">
                         <h3 class="til-check">SẼ THAM DỰ</h3>
                     </label>
-                    <input class="box-feed" type="radio" value="KHÔNG" id="no" name="XÁC NHẬN">
+                    <input class="box-feed" type="radio" value="no" id="no" name="CONFIRM">
                     <label class="check-box" for="no"> 
                         <h3 class="til-check">KHÔNG THAM DỰ</h3>
                     </label>
                 </div>
                 
                 <div class="box-ten">
-                    <input required class="inp-ten" type="text"  name="TÊN" placeholder="Tên khách mời">
-                    <input required class="inp-ten" type="text" name="SỐ KHÁCH" placeholder="Số người đi kèm" maxlength="1" title="Vui lòng nhập đúng 1 chữ số" pattern="\d" />
+                    <input required class="inp-ten" type="text"  name="NAME" placeholder="Tên khách mời">
+                    <input required class="inp-ten" type="text" name="GUEST" placeholder="Số người đi kèm" maxlength="1" title="Vui lòng nhập đúng 1 chữ số" pattern="\d" />
 
                 </div>
 
@@ -217,7 +217,7 @@
                     </label>
                 </div> -->
                 <div class="box-ten">
-                    <textarea id="loi-chuc" name="LỜI CHÚC" rows="4" cols="50" placeholder="HÃY GỬI LỜI CHÚC ĐẾN CÔ DÂU VÀ CHÚ RỂ NHÉ"></textarea>
+                    <textarea id="loi-chuc" name="WISH" rows="4" cols="50" placeholder="HÃY GỬI LỜI CHÚC ĐẾN CÔ DÂU VÀ CHÚ RỂ NHÉ"></textarea>
                 </div>
                 <div class="wrapper">
                     <button class="xacnhan" type="submit">XÁC NHẬN</button>
@@ -279,18 +279,25 @@
 
     </script>
 <script>
-       const scriptURL = 'https://script.google.com/macros/s/AKfycbxegZYDLzB7xP_XeHohRl0wBa-L_Xrq1LbF5Lqjqiu5UafSxNp8cnoI0vBy8sKOodtn/exec';
-        const form = document.forms['chien-diem'];
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxgPMaOgT_WwTpxvhDfLMLvpG27EO9cTFebhACu-UbEqWjmou1cCU0sYa0urgECblui/exec?sheet=vi';
+        const form = document.forms['ken-truc'];
 
         form.addEventListener('submit', e => {
             e.preventDefault(); // Ngừng việc gửi form mặc định
 
             document.getElementById('loading-container').style.display = 'flex';
 
+            let formData = new FormData(form);
+            let data = Object.fromEntries(formData.entries());
+            const confirm = data.CONFIRM;
+            const name = data.NAME;
+            const number_guest = data.GUEST;
+            const wish = data.WISH;
+
             // Gửi dữ liệu form đi
             fetch(scriptURL, {
                 method: 'POST',
-                body: new FormData(form)
+                body: new URLSearchParams({name, confirm, number_guest, wish})
             })
                 .then(response => {
                     if (response.ok) {
