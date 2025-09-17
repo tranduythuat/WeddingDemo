@@ -1,0 +1,834 @@
+@font-face {
+    font-family: 'MTD Portrait Script Bounce';
+    src: url('../fonts/MTD-Portrait-Script-Bounce.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('../fonts/SVN-Gotham.woff2') format('woff2'),
+        url('../fonts/SVN-Gotham.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-GothamBold';
+    src: url('../fonts/SVN-GothamBold.woff2') format('woff2'),
+        url('../fonts/SVN-GothamBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-GothamLight';
+    src: url('../fonts/SVN-GothamLight.woff2') format('woff2'),
+        url('../fonts/SVN-GothamLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SVN-GothamItalic';
+    src: url('../fonts/SVN-GothamItalic.woff2') format('woff2'),
+        url('../fonts/SVN-GothamItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-GothamBoldItalic';
+    src: url('../fonts/SVN-GothamBoldItalic.woff2') format('woff2'),
+        url('../fonts/SVN-GothamBoldItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-GothamBook';
+    src: url('../fonts/SVN-GothamBook.woff2') format('woff2'),
+        url('../fonts/SVN-GothamBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-GothamBookItalic';
+    src: url('../fonts/SVN-GothamBookItalic.woff2') format('woff2'),
+        url('../fonts/SVN-GothamBookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+:root {
+    --bg: #ffffff;
+    --text: #202123ff;
+    --header: #467b92;
+    --accent: #1f6f7a;
+    --muted: #9aa6ab;
+    --card: #f3f6f9ff;
+    --border: #231f20;
+    --radius: 12px;
+    --maxw: 430px;
+    --gap: 24px;
+    --accent-soft: rgba(31, 111, 122, 0.08);
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    /* font-family: "SVN-Gotham", sans-serif; */
+    font-size: 0.67rem;
+    font-weight: normal;
+    background-color: var(--bg);
+    color: #202123ff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.4;
+    /* padding: 24px; */
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    max-width: var(--maxw);
+    min-width: 375px;
+    background-color: var(--card);
+    /* border-radius: 16px; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border-right: var(--border) 2px solid;
+}
+
+
+/* header-section ==========================> */
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-bottom: var(--border) 2px solid;
+}
+
+.header-section .invitation-heading {
+    padding: 60px 0;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-section .invitation-heading .header-text {
+    width: 100%;
+}
+
+.header-section .invitation-heading .header-text img {
+    width: 100%;
+}
+
+.header-section .wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    /* không cho xuống hàng */
+    justify-content: space-between;
+    padding-bottom: 36px;
+    width: 100%;
+}
+
+.header-section .wrapper .text-col {
+    font-family: "MTD Portrait Script Bounce", cursive;
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 42px;
+    position: relative;
+}
+
+.header-section .wrapper .text-col img.heart-1 {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 11px;
+}
+
+.header-section .wrapper .text-col img.heart-2 {
+    position: absolute;
+    top: 72%;
+    left: 41%;
+    width: 12px;
+}
+
+.header-section .wrapper .text-col img.direction-1 {
+    position: absolute;
+    top: 27.9%;
+    left: 7%;
+    width: 26px;
+}
+
+.header-section .wrapper .text-col img.direction-2 {
+    position: absolute;
+    top: 62.9%;
+    left: 3%;
+    width: 19px;
+}
+
+.header-section .wrapper .text-col p {
+    display: block;
+    width: 75%;
+    padding: 30px 0;
+}
+
+.header-section .wrapper .image-col {
+    width: 100%;
+}
+
+.header-section .wrapper .col {
+    flex: 1;
+    /* 2 cột chia đều */
+    min-width: 0;
+    /* cho phép co nhỏ */
+}
+
+.header-section .wrapper .col img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-section .invitation-text {
+    font-family: "SVN-GothamBook", sans-serif;
+    font-size: 0.5rem;
+    font-weight: normal;
+}
+
+.header-section .invitation-text p:nth-child(2) {
+    font-family: "SVN-GothamBookItalic", sans-serif;
+}
+
+.header-section .date-section {
+    font-family: "SVN-GothamBold", sans-serif;
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 0 0 20px 0;
+    text-align: center;
+}
+/* <================================== end header-section */
+
+/* timeline-section ==========================> */
+.timeline-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-bottom: var(--border) 2px solid;
+}
+.timeline-section h3 {
+    font-family: "MTD Portrait Script Bounce", cursive;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #467b92;
+}
+
+.timeline-section .timeline-details {
+    font-family: "SVN-GothamBook", sans-serif;
+    font-size: 0.49rem;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px 25px 78px 25px;
+}
+
+.timeline-section .timeline-details div:first-child,
+.timeline-section .timeline-details div:last-child{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.timeline-section .timeline-details div:nth-child(2) {
+    width: 10%;
+}
+
+.timeline-section .timeline-details div:first-child .box-icon{
+    margin-top: 34px;    
+}
+
+.timeline-section .timeline-details div:last-child .box-icon{
+    margin-bottom: 77px;    
+}
+
+.timeline-section .timeline-details .detail-item .box-icon-middle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.timeline-section .timeline-details .detail-item p {
+    margin: 5px 0 0 0;
+    line-height: 1.2;
+    padding: 0 20px;
+}
+
+.timeline-section .timeline-details div:last-child p.timeline-title {
+    margin-top: 10px;
+}
+
+.timeline-section .timeline-details .detail-item .box-icon-middle img {
+    width: 15px;
+}
+
+.timeline-section .timeline-details .detail-item .box-icon {
+    width: 26%;
+    height: 40px;
+}
+
+.timeline-section .timeline-details .box-icon img.timeline-icon {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* margin: 0 auto; */
+}
+
+.timeline-section .timeline-details p.en-sub {
+    font-family: "SVN-GothamBookItalic", sans-serif;
+}
+
+/* location ========================= > */
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.5rem;
+    border-bottom: var(--border) 2px solid;
+}
+
+.location p {
+    margin: 0;
+}
+
+.location .text {
+    font-family: "SVN-GothamBook", sans-serif;
+    font-weight: normal;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+
+.location .en-sub {
+    font-family: "SVN-GothamBookItalic", sans-serif;
+    font-weight: normal;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.location .location-name {
+    font-family: "MTD Portrait Script Bounce", cursive;
+    font-weight: normal;
+    font-size: 2.3rem;
+    color: var(--header);
+    padding-top: 28px;
+}
+
+.location .box-icon {
+    width: 20px;
+    padding-top: 30px;
+}
+    
+.location .box-icon img {
+    width: 100%;
+}
+
+.location .location-address {
+    font-family: "SVN-GothamBook", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding-top: 28px;
+}
+
+.location .end-en-sub {
+    font-family: "SVN-GothamBookItalic", sans-serif;
+    font-weight: normal;
+    padding-top: 4px;
+    padding-bottom: 55px;
+}
+/* <================================= end location */
+
+/* photo-section ============================> */
+
+.photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: var(--border) 2px solid;
+    padding-bottom: 50px;
+}
+
+.photo-section .photo-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 110px 0 18px 0;
+}
+.photo-section .photo-container img.sub-photo {
+    width: 75%;
+    height: auto;
+}
+
+.photo-section h2 {
+    font-family: "SVN-GothamLight", sans-serif;
+    font-size: 0.67rem;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 1.4px;
+    margin: 0;
+    padding-top: 3px;
+    /* padding-bottom: 60px; */
+}   
+
+/* <================================= end photo-section */
+
+/* rsvp ===========================================> */
+
+.rsvp {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    font-size: 0.6rem;
+    font-weight: normal;
+    padding: 25px 0;
+}
+
+.rsvp .title-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+    padding-bottom: 10px;
+}
+
+.rsvp .head-title {
+    font-family: "SVN-GothamBook", sans-serif;
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 25px 0 22px 0;
+}
+
+.rsvp .box-icon {
+    width: 5%;
+    padding-bottom: 5px;
+}
+
+.rsvp .box-icon img {
+    width: 100%;
+}
+
+.rsvp .rsvp-title {
+    font-family: "MTD Portrait Script Bounce", cursive;
+    font-size: 3.2rem;
+    font-weight: normal;
+    color: var(--header);
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.rsvp .rsvp-text {
+    font-family: "SVN-GothamBook", sans-serif;
+    text-transform: uppercase;
+}
+
+.rsvp .text-en-sub {
+    font-family: "SVN-GothamBookItalic", sans-serif;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+#rsvp-form {
+    width: 100%;
+}
+
+#rsvp-form .form-group.form-group-confirm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: var(--border) 2px solid;
+}
+
+#rsvp-form .form-group.form-group-info {
+    padding: 30px 0 18px 0;
+    border-bottom: var(--border) 2px solid;
+}
+
+
+#rsvp-form .form-group label span {
+    font-style: italic;
+}
+
+#rsvp-form input[type="radio"] {
+    display: none; 
+}
+#rsvp-form .radio-button {
+    font-family: "SVN-GothamBook", sans-serif;
+    display: inline-block;
+    border: 1px solid #6594aeff;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    text-transform: uppercase;
+    user-select: none; 
+    width: 100%;
+    line-height: 1.6;
+    padding: 6px 0;
+    margin: 5px 0;
+}
+
+#rsvp-form .form-group input[type="radio"]:checked + .radio-button {
+    color: #ffffff;
+    background-color: #6594aeff;
+}
+
+#rsvp-form .form-group input.input-text {
+    font-family: "SVN-GothamLight", sans-serif;
+    font-size: 0.7rem;
+    font-weight: normal;
+    font-weight: normal;
+    width: 100%;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #6594aeff;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    user-select: none; 
+    margin-bottom: 12px;
+    padding-left: 13px;
+    outline: none;
+}
+
+#rsvp-form .vegetarian {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: var(--border) 2px solid;
+}
+
+#rsvp-form .vegetarian .text-box {
+    font-family: "SVN-GothamLight", sans-serif;
+}
+
+#rsvp-form .vegetarian .button-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+#rsvp-form .vegetarian .text-box .sub-en {
+    font-style: italic;
+}
+
+#rsvp-form .vegetarian .button-box .radio-button {
+    /* margin: 0 10px; */
+    width: 48%;
+    font-size: 0.55rem;
+}
+
+#rsvp-form .form-actions button {
+    border: none;
+    padding: 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+#rsvp-form .form-actions {
+    padding-top: 20px;
+}
+
+#rsvp-form .form-actions button {
+    background: #6594aeff;
+    font-family: "SVN-GothamBold", sans-serif;
+    font-size: 0.6rem;
+    font-weight: normal;
+    color: #ffffff;
+    padding: 8px 20px;
+}
+
+#rsvp-form .form-actions button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#rsvp-form .form-group.form-group-confirm,
+#rsvp-form .form-group.form-group-info,
+#rsvp-form .vegetarian {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+/* <=================================== end rsvp */
+
+.end {
+    padding: 15px 0 5px 0;
+    font-family: "SVN-GothamBold", sans-serif;
+    font-size: 0.6rem;
+    font-weight: normal;
+}
+
+/* Responsive */
+@media (max-width: 360px) {
+    .wrapper .text-col {
+        font-size: 18px;
+    }
+
+    .wrapper .text-col p {
+        width: 70%;
+    }
+}
+
+@media (min-width: 361px) {
+    .wrapper .text-col {
+        font-size: 22px;
+    }
+
+    .wrapper .text-col p {
+        width: 80%;
+    }
+}
+
+@media (min-width: 390px) {
+    .wrapper .text-col {
+        font-size: 26px;
+    }
+
+    .wrapper .text-col p {
+        width: 90%;
+    }
+
+    .header-section .wrapper .text-col p {
+        width: 95%;
+    }
+
+    .header-section .wrapper .text-col img.heart-1 {
+        position: absolute;
+        top: 27%;
+        left: 39%;
+        width: 12px;
+    }
+    
+    .header-section .wrapper .text-col img.heart-2 {
+        position: absolute;
+        top: 68%;
+        left: 45%;
+        width: 13px;
+    }
+    
+    .header-section .wrapper .text-col img.direction-1 {
+        position: absolute;
+        top: 28%;
+        left: 7%;
+        width: 28px;
+    }
+    
+    .header-section .wrapper .text-col img.direction-2 {
+        position: absolute;
+        top: 60%;
+        left: 7%;
+        width: 21px;
+    }
+}
+
+
+.pulsate-fwd {
+    -webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
+    animation: pulsate-fwd 2s ease-in-out infinite both;
+}
+
+/**
+ * ----------------------------------------
+ * animation pulsate-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+.shake-vertical {
+    -webkit-animation: shake-vertical 10s ease-in-out infinite both;
+    animation: shake-vertical 10s ease-in-out infinite both;
+}
+
+/**
+ * ----------------------------------------
+ * animation shake-vertical
+ * ----------------------------------------
+ */
+@-webkit-keyframes shake-vertical {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    80% {
+        -webkit-transform: translateY(6.4px);
+        transform: translateY(6.4px);
+    }
+
+    90% {
+        -webkit-transform: translateY(-6.4px);
+        transform: translateY(-6.4px);
+    }
+}
+
+@keyframes shake-vertical {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    80% {
+        -webkit-transform: translateY(6.4px);
+        transform: translateY(6.4px);
+    }
+
+    90% {
+        -webkit-transform: translateY(-6.4px);
+        transform: translateY(-6.4px);
+    }
+}
+
+
+.ping {
+    -webkit-animation: ping 1s ease-in-out infinite both;
+    animation: ping 1s ease-in-out infinite both;
+}
+
+@-webkit-keyframes ping {
+    0% {
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+        opacity: 0.8;
+    }
+
+    80% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(2.2);
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+@keyframes ping {
+    0% {
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+        opacity: 0.8;
+    }
+
+    80% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(2.2);
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
