@@ -561,12 +561,14 @@
     <script>
         document.addEventListener( 'DOMContentLoaded', function () {
             new Splide( '#image-carousel', {
-
                 updateOnMove: true,
                 type        : 'loop',
                 perPage     : 1,
                 perMove     : 1,
                 focus       : 'center',
+                autoplay    : true,
+                interval    : 3000,
+                pauseOnHover: true
             }).mount();
 
             new Splide( '#main-carousel', {
@@ -575,6 +577,9 @@
                 perPage     : 1,
                 perMove     : 1,
                 focus       : 'center',
+                autoplay    : true,
+                interval    : 4000,
+                pauseOnHover: false
             }).mount();
         });
     </script>
