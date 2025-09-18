@@ -2,21 +2,24 @@
    1. Variables
 ======================= */
 @font-face {
-    font-family: 'PinyonScript'; /* tên bạn muốn dùng */
+    font-family: 'PinyonScript';
+    /* tên bạn muốn dùng */
     src: url('../fonts/PinyonScript-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SVN-Gotham'; /* tên bạn muốn dùng */
+    font-family: 'SVN-Gotham';
+    /* tên bạn muốn dùng */
     src: url('../fonts/SVN-Gotham.svg') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SVN-Gotham Bold'; /* tên bạn muốn dùng */
+    font-family: 'SVN-Gotham Bold';
+    /* tên bạn muốn dùng */
     src: url('../fonts/SVN-GothamBold.woff2') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -24,42 +27,48 @@
 
 
 @font-face {
-    font-family: 'SVN-Gotham Book'; /* tên bạn muốn dùng */
+    font-family: 'SVN-Gotham Book';
+    /* tên bạn muốn dùng */
     src: url('../fonts/SVN-GothamBook.svg') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SVN-Gotham Light Italic'; /* tên bạn muốn dùng */
+    font-family: 'SVN-Gotham Light Italic';
+    /* tên bạn muốn dùng */
     src: url('../fonts/SVN-GothamLightItalic.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SVN-Gotham Light'; /* tên bạn muốn dùng */
+    font-family: 'SVN-Gotham Light';
+    /* tên bạn muốn dùng */
     src: url('../fonts/SVN-GothamLight.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SVN-Gilroy Bold'; /* tên bạn muốn dùng */
+    font-family: 'SVN-Gilroy Bold';
+    /* tên bạn muốn dùng */
     src: url('../fonts/SVN-Gilroy-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SVN-Gilroy Xlight'; /* tên bạn muốn dùng */
+    font-family: 'SVN-Gilroy Xlight';
+    /* tên bạn muốn dùng */
     src: url('../fonts/SVN-Gilroy-Xlight.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SVN-Gilroy Bold'; /* tên bạn muốn dùng */
+    font-family: 'SVN-Gilroy Bold';
+    /* tên bạn muốn dùng */
     src: url('../fonts/SVN-Gilroy-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
@@ -76,7 +85,7 @@
     --color-primary: #51110fff;
     --color-timeline: #ebdec4ff;
     /* --color-secondary: #d2691e; */
-    
+
 
     /* Layout */
     --radius: 12px;
@@ -138,14 +147,16 @@ p {
     margin-bottom: 1em;
 }
 
-ul, li {
+ul,
+li {
     margin: 0;
     padding: 0;
-    list-style: none; /* bỏ dấu chấm, số thứ tự */
+    list-style: none;
+    /* bỏ dấu chấm, số thứ tự */
 }
 
 a {
-    color: inherit;             
+    color: inherit;
     text-decoration: none;
 }
 
@@ -196,30 +207,36 @@ a {
     padding-bottom: 70px;
 }
 
-.cover .cover-inner .cover-heart img{
+.cover .cover-inner .cover-heart img {
     width: 100%;
 }
 
 .cover .cover-inner .cover-text-1 {
     font-family: 'SVN-Gotham', sans-serif;
-    font-size: 12px;        /* chỉnh theo kích thước bạn muốn, hình của bạn ghi 12px */
-    font-weight: normal;    /* vì trong Inkscape bạn để Normal */
-    letter-spacing: 0.03em; /* giãn cách chữ nhẹ cho sang hơn */
-    text-align: center;     /* căn giữa khung */
-    text-transform: uppercase; /* chuyển chữ hoa như hình */
-    color: var(--color-text-secondary);         /* tông nâu đậm gần giống khung trái tim */
-    line-height: 1;   
+    font-size: 12px;
+    /* chỉnh theo kích thước bạn muốn, hình của bạn ghi 12px */
+    font-weight: normal;
+    /* vì trong Inkscape bạn để Normal */
+    letter-spacing: 0.03em;
+    /* giãn cách chữ nhẹ cho sang hơn */
+    text-align: center;
+    /* căn giữa khung */
+    text-transform: uppercase;
+    /* chuyển chữ hoa như hình */
+    color: var(--color-text-secondary);
+    /* tông nâu đậm gần giống khung trái tim */
+    line-height: 1;
 }
 
 .cover .cover-inner .cover-text-2 {
     font-family: 'SVN-Gotham Light', sans-serif;
-    font-size: 12px;        
-    font-weight: 300;    
+    font-size: 12px;
+    font-weight: 300;
     /* letter-spacing: 0.03em;  */
-    text-align: center;    
-    text-transform: uppercase; 
-    color: var(--color-text-secondary);         
-    line-height: 1;  
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    line-height: 1;
 }
 
 .cover .cover-inner .cover-names {
@@ -322,13 +339,13 @@ a {
 }
 
 .location .btn {
-    display: flex;       
+    display: flex;
     justify-content: center;
     text-align: center;
     /* padding: 10px 20px;            */
-    background-color: var(--color-button);    
-    color: #e8dcc2ff;                
-    text-decoration: none;  
+    background-color: var(--color-button);
+    color: #e8dcc2ff;
+    text-decoration: none;
     border-radius: 50px;
     font-family: "SVN-Gotham", sans-serif;
     font-size: 16px;
@@ -339,10 +356,13 @@ a {
     height: 28px;
 }
 
-.location  .img-frame {
-    border: 3px solid #fff; /* độ dày & màu khung */
-    padding: 4px;              /* khoảng cách giữa ảnh và khung */
-    border-radius: 8px;        /* bo nhẹ các góc */
+.location .img-frame {
+    border: 3px solid #fff;
+    /* độ dày & màu khung */
+    padding: 4px;
+    /* khoảng cách giữa ảnh và khung */
+    border-radius: 8px;
+    /* bo nhẹ các góc */
 }
 
 .location .logo {
@@ -381,7 +401,7 @@ a {
 }
 
 .timeline .timeline-item {
-    flex: 1;     
+    flex: 1;
     display: flex;
     align-items: center;
     text-align: center;
@@ -399,19 +419,19 @@ a {
     width: 100%;
     height: 2px;
     background: #fff;
-    z-index: -1;      
+    z-index: -1;
 }
 
 .timeline .timeline-list .timeline-item:first-child::after {
-    left: 50%;        
+    left: 50%;
 }
 
 .timeline .timeline-list .timeline-item:last-child::after {
-    display: none;  
+    display: none;
 }
 
 .timeline .timeline-item .item {
-    min-height: 25px; 
+    min-height: 25px;
 }
 
 .timeline h2 {
@@ -546,6 +566,7 @@ a {
     height: 100%;
     object-fit: cover;
 }
+
 /* <====================== end album */
 
 /* ===================== RSVP ================================ */
@@ -607,11 +628,11 @@ a {
 }
 
 .rsvp .timeline-line {
-    border: none;         
-    height: 2px;           
-    background: var(--color-text);     
+    border: none;
+    height: 2px;
+    background: var(--color-text);
     padding: 1.5px 0;
-    width: 100%;        
+    width: 100%;
 }
 
 #rsvp-form {
@@ -627,7 +648,8 @@ a {
 }
 
 #rsvp-form input[type="radio"] {
-    display: none; /* Hide the default radio button */
+    display: none;
+    /* Hide the default radio button */
 }
 
 #rsvp-form .form-group .confirm-yes {
@@ -651,11 +673,13 @@ a {
     cursor: pointer;
     background-color: transparent;
     text-transform: uppercase;
-    user-select: none; /* Prevent text selection on click */
+    user-select: none;
+    /* Prevent text selection on click */
 }
 
-#rsvp-form .form-group input[type="radio"]:checked + .radio-button {
-    background-color: var(--color-text); /* Highlight selected button */
+#rsvp-form .form-group input[type="radio"]:checked+.radio-button {
+    background-color: var(--color-text);
+    /* Highlight selected button */
     color: var(--color-timeline);
     border-color: var(--color-text);
 }
@@ -674,12 +698,13 @@ a {
     cursor: pointer;
     background-color: transparent;
     text-transform: uppercase;
-    user-select: none; /* Prevent text selection on click */
+    user-select: none;
+    /* Prevent text selection on click */
     margin-bottom: 12px;
     padding-left: 13px;
 }
 
-#rsvp-form .form-group textarea.input-text  {
+#rsvp-form .form-group textarea.input-text {
     font-family: "SVN-Gotham Book", sans-serif;
     font-size: 11px;
     font-weight: normal;
@@ -691,7 +716,8 @@ a {
 }
 
 #rsvp-form .form-actions button {
-    background-color: var(--color-button); /* Green */
+    background-color: var(--color-button);
+    /* Green */
     border: none;
     color: var(--color-timeline);
     padding: 10px 32px;
@@ -734,7 +760,7 @@ a {
     letter-spacing: 0.15rem;
 }
 
-.extra-info p.p-1  {
+.extra-info p.p-1 {
     font-family: "SVN-Gotham ", sans-serif;
     font-size: 0.625rem;
     font-weight: normal;
@@ -745,7 +771,7 @@ a {
 
 .extra-info p.p-2,
 .extra-info p.p-3,
-.extra-info p.p-4  {
+.extra-info p.p-4 {
     font-family: "SVN-Gotham Light", sans-serif;
     font-size: 0.625rem;
     font-weight: normal;
@@ -766,7 +792,7 @@ a {
     font-size: 32px;
     font-weight: normal;
     padding-bottom: 20px;
-} 
+}
 
 /* new handle accordion ====================> */
 .accordion-container {
@@ -828,8 +854,8 @@ a {
 
 .header-text {
     margin: 0 auto;
-    font-size: 16px;  
-    text-transform: uppercase; 
+    font-size: 16px;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -873,14 +899,14 @@ a {
     align-items: center;
 }
 
-.accordion-conten ul li a{
+.accordion-conten ul li a {
     color: inherit;
     text-decoration: none;
 }
 
 .content-text ul li {
     font-family: "SVN-Gotham Book", sans-serif;
-    font-size: 12px;  
+    font-size: 12px;
     font-weight: normal;
     display: inline-block;
     padding: 0 6px;
@@ -908,6 +934,18 @@ a {
 
 }
 
+
+/* @media screen and (max-width: 528px) {
+    [data-aos="fade-left"] {
+        transform: translateX(-50px);
+    }
+
+    [data-aos="fade-right"] {
+        transform: translateX(50px);
+    }
+}
+ */
+
 @media screen and (max-width: 430px) {
     .timeline .timeline-list .timeline-item .title {
         letter-spacing: 0.05em;
@@ -927,8 +965,8 @@ a {
 
 /* class animation for heart */
 .heartbeat {
-	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-	        animation: heartbeat 1.5s ease-in-out infinite both;
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
 /**
@@ -936,78 +974,87 @@ a {
  * animation heartbeat
  * ----------------------------------------
  */
- @-webkit-keyframes heartbeat {
+@-webkit-keyframes heartbeat {
     from {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: center center;
-              transform-origin: center center;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
     }
+
     10% {
-      -webkit-transform: scale(0.91);
-              transform: scale(0.91);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
     }
+
     17% {
-      -webkit-transform: scale(0.98);
-              transform: scale(0.98);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
     }
+
     33% {
-      -webkit-transform: scale(0.87);
-              transform: scale(0.87);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
     }
+
     45% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
     }
-  }
-  @keyframes heartbeat {
+}
+
+@keyframes heartbeat {
     from {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: center center;
-              transform-origin: center center;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
     }
+
     10% {
-      -webkit-transform: scale(0.91);
-              transform: scale(0.91);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
     }
+
     17% {
-      -webkit-transform: scale(0.98);
-              transform: scale(0.98);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
     }
+
     33% {
-      -webkit-transform: scale(0.87);
-              transform: scale(0.87);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
     }
+
     45% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
     }
-  }
+}
 
 .shake-top {
-	-webkit-animation: shake-top 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
-	        animation: shake-top 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    -webkit-animation: shake-top 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    animation: shake-top 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
 }
 
 /**
@@ -1015,98 +1062,115 @@ a {
  * animation shake-top
  * ----------------------------------------
  */
- @-webkit-keyframes shake-top {
+@-webkit-keyframes shake-top {
+
     0%,
     100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      -webkit-transform-origin: 50% 0;
-              transform-origin: 50% 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
     }
+
     10% {
-      -webkit-transform: rotate(2deg);
-              transform: rotate(2deg);
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
     }
+
     20%,
     40%,
     60% {
-      -webkit-transform: rotate(-4deg);
-              transform: rotate(-4deg);
+        -webkit-transform: rotate(-4deg);
+        transform: rotate(-4deg);
     }
+
     30%,
     50%,
     70% {
-      -webkit-transform: rotate(4deg);
-              transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg);
     }
+
     80% {
-      -webkit-transform: rotate(-2deg);
-              transform: rotate(-2deg);
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
     }
+
     90% {
-      -webkit-transform: rotate(2deg);
-              transform: rotate(2deg);
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
     }
-  }
-  @keyframes shake-top {
+}
+
+@keyframes shake-top {
+
     0%,
     100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      -webkit-transform-origin: 50% 0;
-              transform-origin: 50% 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
     }
+
     10% {
-      -webkit-transform: rotate(2deg);
-              transform: rotate(2deg);
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
     }
+
     20%,
     40%,
     60% {
-      -webkit-transform: rotate(-4deg);
-              transform: rotate(-4deg);
+        -webkit-transform: rotate(-4deg);
+        transform: rotate(-4deg);
     }
+
     30%,
     50%,
     70% {
-      -webkit-transform: rotate(4deg);
-              transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg);
     }
+
     80% {
-      -webkit-transform: rotate(-2deg);
-              transform: rotate(-2deg);
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
     }
+
     90% {
-      -webkit-transform: rotate(2deg);
-              transform: rotate(2deg);
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
     }
-  }
+}
 
 /* music */
-.player{
-  position:fixed;
-  top:10px;
-  right:10px;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  cursor:pointer;
-  box-shadow:0 4px 12px rgba(0,0,0,0.4);
-  border:none;
-  outline:none;
+.player {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: none;
+    outline: none;
 }
 
-.player img{
-  width: 100%;
-  height: auto;
+.player img {
+    width: 100%;
+    height: auto;
 }
 
-.spin{
-  animation: spin 4s linear infinite;
+.spin {
+    animation: spin 4s linear infinite;
 }
 
-@keyframes spin{
-  from{transform:rotate(0deg);}
-  to{transform:rotate(360deg);}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
-  
