@@ -115,17 +115,17 @@
                 <p data-aos="fade-right" class="rsvp-text">Khách mời vui lòng xác nhận tham dự <strong>trước ngày 22/02/2026</strong> để chúng tôi có thể chuẩn bị chu đáo nhất</p>
                 <p data-aos="fade-right" class="text-en-sub">/WILL YOU BE ABLE TO JOIN? PLEASE KINDLY RESPOND BY <strong>22/2/2026 </strong> TO HELP US FINALIZE PLANS/</p>
             </div>
-            <form id="rsvp-form">
+            <form action="#" id="rsvp-form">
                 <div class="form-group form-group-confirm">
-                    <input type="radio" class="confirm" id="confirm-yes-1" name="confirm" />
+                    <input type="radio" class="confirm" id="confirm-yes-1" value="Yes for vow ceremony and reception dinner" name="confirm" checked required />
                     <label data-aos="fade-up" data-aos-delay="300" for="confirm-yes-1" class="radio-button">
                         SẼ THAM DỰ LỄ VOW VÀ TIỆC CHÍNH </br> <span>/YES FOR VOW CEREMONY AND RECEPTION DINNER/</span>
                     </label>
-                    <input type="radio" class="confirm" id="confirm-yes-2" name="confirm" />
+                    <input type="radio" class="confirm" id="confirm-yes-2" value="Yes for reception dinner" name="confirm" />
                     <label data-aos="fade-up" data-aos-delay="600" for="confirm-yes-2" id="confirm-no-label" class="radio-button">
                         THAM DỰ TIỆC CHÍNH <span>/YES FOR RECEPTION DINNER/</span>
                     </label>
-                    <input type="radio" class="confirm" id="confirm-no" name="confirm" />
+                    <input type="radio" class="confirm" id="confirm-no" value="Sorry i can'nt come" name="confirm" />
                     <label data-aos="fade-up" data-aos-delay="900" for="confirm-no" id="confirm-no-label" class="radio-button">
                         KHÔNG THAM DỰ <span>/SORRY I CAN'T COME/</span> 
                     </label>
@@ -135,7 +135,7 @@
                         <input data-aos="fade-up" data-aos-delay="1200" type="text" class="name input-text" id="name" name="name" placeholder="Tên khách mời /Name/" required />
                     </div>
                     <div class="form-group">
-                        <input data-aos="fade-up" data-aos-delay="1500" type="text" class="guest-number input-text" id="guest-number" name="guest-number" placeholder="Bạn có người đi kèm không? /Will you bring a plus one?/" />
+                        <input data-aos="fade-up" data-aos-delay="1500" type="text" class="guest-number input-text" id="guest-number" name="guest_number" placeholder="Bạn có người đi kèm không? /Will you bring a plus one?/" />
                     </div>
                 </div>
                 <div class="form-group vegetarian">
@@ -144,9 +144,9 @@
                         <p data-aos="fade-right" class="sub-en">DO YOU HAVE ANY DIETARY RESTRICTIONS?</p>
                     </div>
                     <div class="button-box">
-                        <input type="radio" class="confirm" id="confirm-no-vegetarian" name="confirm-vegetarian" />
+                        <input type="radio" class="confirm" id="confirm-no-vegetarian" value="No" name="confirm_vegetarian"/>
                         <label data-aos="fade-right" for="confirm-no-vegetarian" id="confirm-no-label" class="radio-button confirm-no">KHÔNG /NO/</label>
-                        <input type="radio" class="confirm" id="confirm-yes-vegetarian" name="confirm-vegetarian" />
+                        <input type="radio" class="confirm" id="confirm-yes-vegetarian" value="I'm a vegetarian" name="confirm_vegetarian" />
                         <label data-aos="fade-right" for="confirm-yes-vegetarian" class="radio-button confirm-yes">TÔI ĂN CHAY /I’M A VEGETARIAN/</label>
                     </div>
                 </div>
@@ -180,6 +180,8 @@
             anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/rsvp.js"></script>
 </body>
 
 </html>
