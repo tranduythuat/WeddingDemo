@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora-Regular.woff2') format('woff2'),
+        url('Lora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora-Italic.woff2') format('woff2'),
+        url('Lora-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora-Regular.woff2') format('woff2'),
+        url('Lora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'UVN Ke Chuyen3';
+    src: url('UVNKeChuyen3.woff2') format('woff2'),
+        url('UVNKeChuyen3.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora-Regular.woff2') format('woff2'),
+        url('Lora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora-Regular.woff2') format('woff2'),
+        url('Lora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Aaron Script';
+    src: url('SVN-AaronScript.woff2') format('woff2'),
+        url('SVN-AaronScript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
