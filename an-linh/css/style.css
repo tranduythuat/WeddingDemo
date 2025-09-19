@@ -100,7 +100,7 @@
   --font-pinyon: "Pinyon Script";
   --font-svn: "SVN-Aaron Script";
   --primary-color: #232916ff;
-  --header-color: #7d1315ff;
+  --header-color: #8b907b;
 }
 
 /* Hiệu ứng fade-down */
@@ -303,11 +303,12 @@
   height: auto;
   /* background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000'); */
   /* background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000'); */
-  background-image: url("../anh/g196.png"), url("../anh/path194.png");
-  background-position: center, center;
+  /* background-image: url("../anh/g196.png"), url("../anh/path194.png"); */
+  /* background-position: center, center;
   background-size: cover, cover;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat; */
   color: #fff;
+  background: #434a4e;
   text-align: center;
   /* padding-top: 52px; */
 }
@@ -381,6 +382,10 @@
   justify-content: center;
   margin: 50px 0;
   width: 40px;
+}
+
+.box-flow img {
+  max-height: 120px;
 }
 
 .logo {
@@ -619,14 +624,14 @@
   margin: 0 auto;
   /* border: 2px solid var(--primary-color); */
   /* border-radius: 20px; */
-  padding: 15px;
+  padding: 12px;
 }
 
 .box-color .box-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .box-color .box-item .color {
@@ -648,6 +653,10 @@
   font-size: 0.8em;
 }
 
+.lb-color-mini {
+  font-size: 0.6em;
+}
+
 .box-image1 {
   display: flex;
   justify-content: center;
@@ -659,6 +668,8 @@
 .img1,
 .img2 {
   width: 43%;
+  background: var(--header-color);
+  min-height: 200px;
 }
 
 .img-flow2 {
@@ -668,13 +679,14 @@
 
 /* SLIDER */
 .slider {
-  width: 100%;
-  max-width: 800px;
-  height: 700px;
+  width: 80%;
+  margin: 0 auto;
+  height: 500px;
   position: relative;
   overflow: hidden; /* Ẩn phần ảnh vượt ngoài slider */
   border-radius: 15px;
   margin-top: 50px;
+  background: #cfdbe1;
 }
 
 .slide {
@@ -704,6 +716,7 @@
   background-color: #fff;
   font-size: 18px;
   color: #111;
+  display: none;
 }
 .btn:active {
   transform: scale(1.1);
@@ -740,6 +753,11 @@ form .logo {
   margin: 20px 0;
 }
 
+.lb-form {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+}
+
 .lb-form1 {
   font-family: var(--font-pinyon);
   font-size: 2.5em;
@@ -756,6 +774,7 @@ form .logo {
   font-weight: 300;
   word-spacing: 1px;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 [type="radio"] {
@@ -916,15 +935,16 @@ textarea::placeholder {
 }
 
 .card {
-  background: #3e4a2c;
+  background: #505738;
   color: white;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
   padding: 30px 20px;
   border-radius: 20px;
   text-align: center;
   line-height: 1.6;
 }
+
 .card p {
   font-size: 14px;
   margin-bottom: 20px;
