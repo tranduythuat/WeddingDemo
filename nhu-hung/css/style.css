@@ -107,6 +107,7 @@ body {
     /* border-radius: 16px; */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
     border-right: var(--border) 2px solid;
+    overflow: hidden;
 }
 
 
@@ -156,29 +157,29 @@ body {
 
 .header-section .wrapper .text-col img.heart-1 {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 35%;
     width: 11px;
 }
 
 .header-section .wrapper .text-col img.heart-2 {
     position: absolute;
-    top: 72%;
-    left: 41%;
-    width: 12px;
+    top: 65%;
+    left: 35%;
+    width: 14px;
 }
 
 .header-section .wrapper .text-col img.direction-1 {
     position: absolute;
-    top: 27.9%;
+    top: 25%;
     left: 7%;
     width: 26px;
 }
 
 .header-section .wrapper .text-col img.direction-2 {
     position: absolute;
-    top: 62.9%;
-    left: 3%;
+    top: 55%;
+    left: 0%;
     width: 19px;
 }
 
@@ -199,10 +200,42 @@ body {
     /* cho phép co nhỏ */
 }
 
-.header-section .wrapper .col img {
+.header-section .wrapper .image-col img {
+    position: relative;
+    left: -27px;
     max-width: 100%;
     height: auto;
     display: block;
+    transform: scaleX(-1) rotate(-9deg);
+}
+
+.flip-tilt-bounce {
+    width: 250px;
+    display: block;
+    margin: 50px auto;
+
+    /* Lật ngang + nghiêng */
+    transform: scaleX(-1) rotate(-9deg);
+
+    /* Animation chuyển động */
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* Định nghĩa animation */
+@keyframes floatUpDown {
+    0% {
+        transform: scaleX(-1) rotate(-9deg) translateY(0);
+    }
+
+    50% {
+        transform: scaleX(-1) rotate(-9deg) translateY(-15px);
+        /* bay lên */
+    }
+
+    100% {
+        transform: scaleX(-1) rotate(-9deg) translateY(0);
+        /* trở về */
+    }
 }
 
 .header-section .invitation-text {
@@ -222,6 +255,7 @@ body {
     padding: 0 0 20px 0;
     text-align: center;
 }
+
 /* <================================== end header-section */
 
 /* timeline-section ==========================> */
@@ -232,6 +266,7 @@ body {
     align-items: center;
     border-bottom: var(--border) 2px solid;
 }
+
 .timeline-section h3 {
     font-family: "MTD Portrait Script Bounce", cursive;
     font-size: 2.5rem;
@@ -250,7 +285,7 @@ body {
 }
 
 .timeline-section .timeline-details div:first-child,
-.timeline-section .timeline-details div:last-child{
+.timeline-section .timeline-details div:last-child {
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -262,12 +297,12 @@ body {
     width: 10%;
 }
 
-.timeline-section .timeline-details div:first-child .box-icon{
-    margin-top: 34px;    
+.timeline-section .timeline-details div:first-child .box-icon {
+    margin-top: 34px;
 }
 
-.timeline-section .timeline-details div:last-child .box-icon{
-    margin-bottom: 77px;    
+.timeline-section .timeline-details div:last-child .box-icon {
+    margin-bottom: 77px;
 }
 
 .timeline-section .timeline-details .detail-item .box-icon-middle {
@@ -351,7 +386,7 @@ body {
     width: 20px;
     padding-top: 30px;
 }
-    
+
 .location .box-icon img {
     width: 100%;
 }
@@ -369,6 +404,7 @@ body {
     padding-top: 4px;
     padding-bottom: 55px;
 }
+
 /* <================================= end location */
 
 /* photo-section ============================> */
@@ -390,6 +426,7 @@ body {
     align-items: center;
     padding: 110px 0 18px 0;
 }
+
 .photo-section .photo-container img.sub-photo {
     width: 75%;
     height: auto;
@@ -404,7 +441,7 @@ body {
     margin: 0;
     padding-top: 3px;
     /* padding-bottom: 60px; */
-}   
+}
 
 /* <================================= end photo-section */
 
@@ -492,8 +529,9 @@ body {
 }
 
 #rsvp-form input[type="radio"] {
-    display: none; 
+    display: none;
 }
+
 #rsvp-form .radio-button {
     font-family: "SVN-GothamBook", sans-serif;
     display: inline-block;
@@ -502,14 +540,14 @@ body {
     cursor: pointer;
     background-color: transparent;
     text-transform: uppercase;
-    user-select: none; 
+    user-select: none;
     width: 100%;
     line-height: 1.6;
     padding: 6px 0;
     margin: 5px 0;
 }
 
-#rsvp-form .form-group input[type="radio"]:checked + .radio-button {
+#rsvp-form .form-group input[type="radio"]:checked+.radio-button {
     color: #ffffff;
     background-color: #6594aeff;
 }
@@ -526,7 +564,7 @@ body {
     border-radius: 50px;
     cursor: pointer;
     background-color: transparent;
-    user-select: none; 
+    user-select: none;
     margin-bottom: 12px;
     padding-left: 13px;
     outline: none;
@@ -602,27 +640,12 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 360px) {
-    .wrapper .text-col {
-        font-size: 18px;
-    }
 
-    .wrapper .text-col p {
-        width: 70%;
-    }
-}
 
-@media (min-width: 361px) {
-    .wrapper .text-col {
-        font-size: 22px;
-    }
 
-    .wrapper .text-col p {
-        width: 80%;
-    }
-}
 
-@media (min-width: 390px) {
+
+@media screen and (max-width: 390px) {
     .wrapper .text-col {
         font-size: 26px;
     }
@@ -636,31 +659,61 @@ body {
     }
 
     .header-section .wrapper .text-col img.heart-1 {
-        position: absolute;
-        top: 27%;
-        left: 39%;
-        width: 12px;
+        top: 110px;
+        left: 75px;
+        width: 11px;
     }
-    
+
     .header-section .wrapper .text-col img.heart-2 {
-        position: absolute;
-        top: 68%;
-        left: 45%;
+        top: 249px;
+        left: 86px;
         width: 13px;
     }
-    
+
     .header-section .wrapper .text-col img.direction-1 {
-        position: absolute;
-        top: 28%;
-        left: 7%;
-        width: 28px;
+        top: 90px;
+        left: 25px;
+        width: 24px;
     }
-    
+
     .header-section .wrapper .text-col img.direction-2 {
-        position: absolute;
-        top: 60%;
-        left: 7%;
-        width: 21px;
+        top: 211px;
+        left: 15px;
+        width: 18px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .wrapper .text-col {
+        font-size: 18px;
+    }
+
+    .wrapper .text-col p {
+        width: 70%;
+    }
+
+    .header-section .wrapper .text-col img.heart-1 {
+        top: 30%;
+        left: 38%;
+        width: 10px;
+    }
+
+    .header-section .wrapper .text-col img.heart-2 {
+        top: 75%;
+        left: 43%;
+        width: 13px;
+    }
+
+    .header-section .wrapper .text-col img.direction-1 {
+        top: 90px;
+        left: 20px;
+        width: 24px;
+    }
+
+    .header-section .wrapper .text-col img.direction-2 {
+        top: 213px;
+        left: 12px;
+        width: 18px;
     }
 }
 
@@ -708,86 +761,6 @@ body {
         transform: scale(1);
     }
 }
-
-
-.shake-vertical {
-    -webkit-animation: shake-vertical 10s ease-in-out infinite both;
-    animation: shake-vertical 10s ease-in-out infinite both;
-}
-
-/**
- * ----------------------------------------
- * animation shake-vertical
- * ----------------------------------------
- */
-@-webkit-keyframes shake-vertical {
-
-    0%,
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    10%,
-    30%,
-    50%,
-    70% {
-        -webkit-transform: translateY(-8px);
-        transform: translateY(-8px);
-    }
-
-    20%,
-    40%,
-    60% {
-        -webkit-transform: translateY(8px);
-        transform: translateY(8px);
-    }
-
-    80% {
-        -webkit-transform: translateY(6.4px);
-        transform: translateY(6.4px);
-    }
-
-    90% {
-        -webkit-transform: translateY(-6.4px);
-        transform: translateY(-6.4px);
-    }
-}
-
-@keyframes shake-vertical {
-
-    0%,
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    10%,
-    30%,
-    50%,
-    70% {
-        -webkit-transform: translateY(-8px);
-        transform: translateY(-8px);
-    }
-
-    20%,
-    40%,
-    60% {
-        -webkit-transform: translateY(8px);
-        transform: translateY(8px);
-    }
-
-    80% {
-        -webkit-transform: translateY(6.4px);
-        transform: translateY(6.4px);
-    }
-
-    90% {
-        -webkit-transform: translateY(-6.4px);
-        transform: translateY(-6.4px);
-    }
-}
-
 
 .ping {
     -webkit-animation: ping 1s ease-in-out infinite both;
