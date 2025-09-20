@@ -99,7 +99,7 @@
   --font-uvn2: "UVN Ke Chuyen2";
   --font-pinyon: "Pinyon Script";
   --font-svn: "SVN-Aaron Script";
-  --primary-color: #232916ff;
+  --primary-color: #505738;
   --header-color: #8b907b;
 }
 
@@ -115,6 +115,10 @@
 .lb-inv.visible {
   transform: translateY(0);
   opacity: 1;
+}
+
+.kinhmoi.visible {
+  line-height: 12px;
 }
 
 /* Hiệu ứng fade-up */
@@ -303,12 +307,12 @@
   height: auto;
   /* background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000'); */
   /* background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000'); */
-  /* background-image: url("../anh/g196.png"), url("../anh/path194.png"); */
-  /* background-position: center, center;
-  background-size: cover, cover;
-  background-repeat: no-repeat, no-repeat; */
-  color: #fff;
   background: #434a4e;
+  background-image: url("../anh/anh-cuoi/banner.jpg");
+  background-position: center, center;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  color: #fff;
   text-align: center;
   /* padding-top: 52px; */
 }
@@ -326,7 +330,7 @@
   padding-top: 350px;
 }
 
-.dot {
+.dotwelcome {
   font-size: 3px;
   margin: 0 5px;
   display: inline-block;
@@ -410,6 +414,7 @@
 
 .inv label.lb-inv {
   padding-top: 10px;
+  font-size: 32px;
 }
 
 .box-map {
@@ -448,12 +453,13 @@
 
 .lb-add {
   font-family: var(--font-pinyon);
-  font-size: 2.3em;
+  font-size: 24px;
 }
 
 .add2 {
   font-family: var(--font-lora);
   font-size: 0.5em;
+  line-height: 12px;
 }
 
 .maps {
@@ -679,56 +685,45 @@
 
 /* SLIDER */
 .slider {
-  width: 80%;
-  margin: 0 auto;
-  height: 500px;
   position: relative;
-  overflow: hidden; /* Ẩn phần ảnh vượt ngoài slider */
-  border-radius: 15px;
-  margin-top: 50px;
-  background: #cfdbe1;
+  width: 88%; /* chỉnh kích thước */
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
 .slide {
   width: 100%;
   height: 100%;
-  position: absolute;
-  transition: all 0.5s;
+  display: none;
 }
 
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh vừa với 2 bên khung */
-  object-position: center; /* Căn giữa ảnh */
+  object-fit: cover;
 }
 
-/* Nút điều hướng */
-.btn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  border: none;
+/* Dots */
+.dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
+  background-color: #c7c9bf;
   border-radius: 50%;
-  z-index: 10;
   cursor: pointer;
-  background-color: #fff;
-  font-size: 18px;
-  color: #111;
-  display: none;
-}
-.btn:active {
-  transform: scale(1.1);
-}
-.btn-prev {
-  top: 45%;
-  left: 2%;
+  transition: background-color 0.3s;
 }
 
-.btn-next {
-  top: 45%;
-  right: 2%;
+.active {
+  background-color: #505738;
 }
 
 .img-flow3 {
@@ -764,14 +759,17 @@ form .logo {
 }
 
 .lb-dot {
-  font-size: 0.5em;
+  font-size: 6px;
   margin: 30px 0;
+}
+
+.lb-dot-card {
+  margin-bottom: 20px;
 }
 
 .in-fe {
   font-family: var(--font-lora);
-  font-size: 0.65em;
-  font-weight: 300;
+  font-size: 10px;
   word-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -849,16 +847,22 @@ form .logo {
 }
 
 .check-box {
-  width: 150px;
+  width: 160px;
   text-align: center;
   display: inline-block;
   border: 2px solid var(--primary-color);
   padding: 5px 10px;
-  margin: 5px 20px;
+  margin: 5px 14px;
   border-radius: 20px;
   font-style: normal;
   background-color: #fff;
 }
+
+.check-box-yes {
+  background-color: #505738;
+  color: #fff;
+}
+
 .box-feed:checked + label {
   color: #fff;
   background-color: var(--primary-color);
@@ -916,14 +920,14 @@ textarea::placeholder {
 }
 .xacnhan {
   height: 30px;
-  font-size: 15px;
+  font-size: 0.7em;
   background: var(--primary-color);
   color: #fff;
   margin: 20px 10px;
   border-radius: 20px;
   border: 1px solid var(--primary-color);
   cursor: pointer;
-  width: 150px;
+  width: 180px;
   font-weight: 300;
   font-family: var(--font-lora);
 }
@@ -937,32 +941,47 @@ textarea::placeholder {
 .card {
   background: #505738;
   color: white;
-  max-width: 80%;
+  max-width: 88%;
   margin: 0 auto;
   padding: 30px 20px;
   border-radius: 20px;
-  text-align: center;
   line-height: 1.6;
+  text-align: justify; /* các dòng bình thường canh đều */
+  text-align-last: center;
+  text-transform: uppercase;
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 11px;
   margin-bottom: 20px;
+  font-family: var(--font-lora);
 }
 .card .divider {
   font-size: 20px;
   margin: 10px 0;
 }
+
+.container-qr-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .qr-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid white;
-  border-radius: 8px;
   background: white;
   color: #3e4a2c;
   text-decoration: none;
   font-weight: bold;
-  margin: 15px 0;
+  width: 160px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  padding: 5px 10px;
+  margin: 5px 14px;
+  border-radius: 20px;
+  font-style: normal;
+  background-color: #fff;
+  font-family: var(--font-lora);
+  font-size: 11px;
 }
 .input-box {
   width: 100%;
@@ -973,13 +992,18 @@ textarea::placeholder {
   font-size: 14px;
 }
 .send-btn {
-  background: white;
-  color: #3e4a2c;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
+  width: 160px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  padding: 5px 10px;
+  margin: 5px 14px;
+  border-radius: 20px;
+  font-style: normal;
+  background-color: #fff;
+  font-family: var(--font-lora);
+
+  font-size: 11px;
 }
 .send-btn:hover {
   background: #ddd;
@@ -1021,7 +1045,7 @@ textarea::placeholder {
   font-family: var(--font-lora);
   line-height: 20px;
   padding-top: 46px;
-  width: 80%;
+  width: 88%;
   text-transform: uppercase;
 }
 
@@ -1173,6 +1197,36 @@ textarea::placeholder {
 /* Hiệu ứng xoay liên tục */
 .circle.spin {
   animation: spin 1s linear infinite; /* Xoay liên tục */
+}
+
+.wish-box {
+  width: 100%;
+  max-width: 600px; /* giới hạn chiều rộng */
+  min-height: 120px;
+  margin: 20px auto;
+
+  background: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 40px 20px;
+  font-family: var(--font-lora);
+
+  font-size: 11px;
+  text-align: center; /* chữ nhập vào nằm giữa */
+  color: #333;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  resize: none; /* không cho resize */
+  outline: none; /* bỏ viền khi focus */
+}
+
+/* placeholder style */
+.wish-box::placeholder {
+  color: #999;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 1.6;
 }
 
 /* Định nghĩa hoạt ảnh xoay */
