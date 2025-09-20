@@ -308,7 +308,7 @@
   /* background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000'); */
   /* background-image: url('https://drive.google.com/thumbnail?id=15n6CSoMBj51JrEo-in-IaTVDBr4t0g_3&sz=w1000'); */
   background: #434a4e;
-  background-image: url("../anh/anh-cuoi/pic-thumbnail.jpg");
+  background-image: url("../anh/anh-cuoi/group-pic-2.jpg");
   background-position: center, center;
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
@@ -938,7 +938,7 @@ textarea::placeholder {
   color: white;
   max-width: 88%;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 30px 22px;
   border-radius: 20px;
   line-height: 1.6;
   text-align: justify; /* các dòng bình thường canh đều */
@@ -947,12 +947,12 @@ textarea::placeholder {
 }
 
 .card p {
-  font-size: 11px;
+  font-size: 0.6rem;
   margin-bottom: 20px;
   font-family: var(--font-lora);
 }
 .card .divider {
-  font-size: 20px;
+  font-size: 0.7rem;
   margin: 10px 0;
 }
 
