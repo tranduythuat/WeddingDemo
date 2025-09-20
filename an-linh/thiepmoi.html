@@ -247,7 +247,7 @@
                 </div>
     
                 <div class="container-check">
-                    <input class="box-feed" type="radio" value="yes" id="yes" name="CONFIRM">
+                    <input class="box-feed" type="radio" value="yes" id="yes" checked name="CONFIRM">
                     <label class="check-box check-box-yes" for="yes">
                         <h3 class="til-check">SẼ THAM DỰ / YES</h3>
                     </label>
@@ -258,7 +258,7 @@
                 </div>
                 
                 <div class="box-ten">
-                    <input required class="inp-ten" type="text"  name="NAME" placeholder="Tên khách mời / Name">
+                    <input required class="inp-ten" type="text" id="name" name="NAME" placeholder="Tên khách mời / Name">
                     <input required class="inp-ten" type="text" name="GUEST" placeholder="Số Người Đi Kèm / Number of attendance" maxlength="1" title="Vui lòng nhập đúng 1 chữ số" pattern="\d" />
 
                 </div>
@@ -269,9 +269,8 @@
                     </label>
                 </div>
                 <div class="container-check">
-                    <input class="box-feed" type="radio" value="KHÔNG" id="yfood" name="LƯU Ý THỨC ĂN">
-                    <input class="inp-ten" type="text" name="note" placeholder="" maxlength="1"/>
-
+                    <!-- <input class="box-feed" type="radio" value="KHÔNG" id="yfood" name="LƯU Ý THỨC ĂN"> -->
+                    <input class="inp-ten" type="text" name="DIETARY" placeholder=""/>
                 </div>
                 <!-- <div class="box-ten">
                     <textarea id="loi-chuc" name="WISH" rows="4" cols="50" placeholder="HÃY GỬI LỜI CHÚC ĐẾN CÔ DÂU VÀ CHÚ RỂ NHÉ"></textarea>
@@ -307,7 +306,7 @@
                 <em>/Send wedding gifts for the bride and groom./</em>
                 </p>
                 <div class="container-qr-code">
-                    <a href="#" class="qr-btn">QR CODE</a>
+                    <a href="#" class="qr-btn" id="qr-btn">QR CODE</a>
                 </div>
 
                 <!-- <p>
@@ -315,11 +314,11 @@
                 <em>/Write a wish for the bride and groom/</em>
                 </p> -->
 
-                <textarea class="input-box wish-box" rows="2"  placeholder="VIẾT LỜI CHÚC DÀNH CHO CÔ DÂU VÀ CHÚ RỂ
+                <textarea class="input-box wish-box" rows="2" id="wish-content" placeholder="VIẾT LỜI CHÚC DÀNH CHO CÔ DÂU VÀ CHÚ RỂ
 /WRITE A WISH FOR THE BRIDE AND GROOM/"></textarea>
 
                 <br>
-                <button class="send-btn">GỬI / SEND</button>
+                <button class="send-btn" id="wish-button">GỬI / SEND</button>
             </div>
 
             <div class="end" >
@@ -378,8 +377,78 @@
 
     </script>
 <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxgPMaOgT_WwTpxvhDfLMLvpG27EO9cTFebhACu-UbEqWjmou1cCU0sYa0urgECblui/exec?sheet=vi';
+        const scripConfirmtURL = 'https://script.google.com/macros/s/AKfycbw9BMfJhh307Z5uIOBvkCupxX09SBI2F4BGObW8e8RgK3i0XkR0NC9n0axE-XuCLCZv/exec?sheet=confirm';
+        const scripWishUrl ='https://script.google.com/macros/s/AKfycbw9BMfJhh307Z5uIOBvkCupxX09SBI2F4BGObW8e8RgK3i0XkR0NC9n0axE-XuCLCZv/exec?sheet=wish';
         const form = document.forms['an-linh'];
+        const wishButton = document.getElementById('wish-button');
+
+        wishButton.addEventListener('click', function(e) {
+            let wish = document.getElementById("wish-content").value;
+            let name = document.getElementById("name").value;
+            document.getElementById('loading-container').style.display = 'flex';
+
+            if (name === "") {
+                document.getElementById('loading-container').style.display = 'none';
+                Swal.fire({
+                    icon: "warning",
+                    title: "Hãy điền thông tin của bạn trước giúp chúng mình nha <3",
+                    confirmButtonText: "OKE",
+                    confirmButtonColor: "#505738",
+                    background: '#f8f8f8',
+                    returnFocus: false 
+                }).then(() => {
+                    document.getElementById("name").focus(); // focus lại input sau khi đóng Swal
+                });
+                return;
+            }
+
+            fetch(
+                scripWishUrl, 
+                {
+                    method: 'POST',
+                    body: new URLSearchParams({name, wish})
+                }
+            ).then(response => {
+                if (response.ok) {
+                    document.getElementById('loading-container').style.display = 'none';
+                    Swal.fire({
+                        title: 'Thành công',
+                        text: 'Cảm ơn bạn, lời chúc đã được gửi đến dâu rể rồi nhaa <3',
+                        imageWidth: 300,
+                        imageHeight: 200,
+                        confirmButtonText: 'ĐÓNG',
+                        background: '#f8f8f8',
+                        padding: '20px',
+                        customClass: {
+                            popup: 'custom-popup',
+                            title: 'custom-title',
+                            confirmButton: 'custom-confirm-button'
+                        },
+                        didOpen: () => {
+                            document.querySelector('.swal2-popup').style.borderRadius = '10px'; // Bo tròn các góc
+                        }
+                    });
+                } else {
+                    console.error('Error!', response);
+                    document.getElementById('loading-container').style.display = 'none';
+                    Swal.fire({
+                        title: 'Oops!',
+                        text: 'Lỗi mất rồi thử lại giúp chúng mình nhé',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            }).catch(error => {
+                console.error('Error!', error.message);
+                document.getElementById('loading-container').style.display = 'none';
+                Swal.fire({
+                    title: 'Oops!',
+                    text: 'Lỗi mất rồi thử lại giúp chúng mình nhé',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            });
+        });
 
         form.addEventListener('submit', e => {
             e.preventDefault(); // Ngừng việc gửi form mặc định
@@ -391,17 +460,17 @@
             const confirm = data.CONFIRM;
             const name = data.NAME;
             const number_guest = data.GUEST;
-            const wish = data.WISH;
+            const dietary = data.DIETARY;
 
             // Gửi dữ liệu form đi
-            fetch(scriptURL, {
+            fetch(scripConfirmtURL, {
                 method: 'POST',
-                body: new URLSearchParams({name, confirm, number_guest, wish})
+                body: new URLSearchParams({name, confirm, number_guest, dietary})
             })
-                .then(response => {
+            .then(response => {
                     if (response.ok) {
                         // Nếu dữ liệu gửi thành công, làm mới lại form
-                        form.reset(); // Làm mới lại form
+                       // Làm mới lại form
 
                         document.getElementById('loading-container').style.display = 'none';
 
@@ -425,6 +494,7 @@
                     } else {
                         // Nếu gặp lỗi khi gửi dữ liệu
                         console.error('Error!', response);
+                        form.reset(); 
 
                         document.getElementById('loading-container').style.display = 'none';
 
@@ -438,6 +508,7 @@
                 })
                 .catch(error => {
                     // Xử lý lỗi nếu có
+                    form.reset(); 
                     console.error('Error!', error.message);
 
                     document.getElementById('loading-container').style.display = 'none';
@@ -503,7 +574,7 @@ const audio = document.getElementById("audio");
 const videoIframe = document.getElementById("video");
 
 // Thêm sự kiện khi nhấn vào vòng tròn
-musicCircle.addEventListener("click", toggleMusic);
+// musicCircle.addEventListener("click", toggleMusic);
 
 // Hàm điều khiển việc phát hoặc tạm dừng nhạc
 function toggleMusic() {
@@ -544,6 +615,24 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+</script>
+<script>
+    const qrcode = document.getElementById('qr-btn');
+    qrcode.addEventListener("click", toggleQR);
+
+    function toggleQR (e)
+    {
+        e.preventDefault();
+        Swal.fire({
+            title: "",
+            text: "",
+            imageUrl: "anh/qr.JPG",
+            imageWidth: 300,
+            imageHeight: "auto",
+            imageAlt: "Custom image",
+            confirmButtonColor: "#505738"
+        });
+    }
 </script>
 </body>
 </html>

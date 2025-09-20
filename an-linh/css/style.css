@@ -858,11 +858,6 @@ form .logo {
   background-color: #fff;
 }
 
-.check-box-yes {
-  background-color: #505738;
-  color: #fff;
-}
-
 .box-feed:checked + label {
   color: #fff;
   background-color: var(--primary-color);
