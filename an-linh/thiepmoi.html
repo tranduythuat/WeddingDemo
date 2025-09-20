@@ -1,66 +1,549 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://i.postimg.cc/L6dBhFXQ/Cici3711-1-copy-2.jpg" />
+    <!-- Thông tin Open Graph cho ảnh đại diện -->
+    <meta property="og:image" content="anh/anh-cuoi/thumbnail.jpg" />
 
     <meta property="og:image:width" content="600" /> <!-- Chiều rộng ảnh đại diện -->
     <meta property="og:image:height" content="300" /> <!-- Chiều cao ảnh đại diện -->
 
     <!-- Các thông tin khác cho Open Graph -->
-    <meta property="og:title" content="KEN - TRUC" />
-    <meta property="og:description" content="KEN LEE - HỒNG TRÚC" />
-    <meta property="og:url" content="https://yenstudio.com.vn/ken-truc/thiepmoi.html" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>HỒNG TRÚC - KEN LEE</title>
+    <meta property="og:title" content="AN - LINH" />
+    <meta property="og:description" content="NHỰT AN - HOÀI LINH" />
+    <meta property="og:url" content="https://yenstudio.com.vn/an-linh/thiepmoi.html" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>NHỰT AN - HOÀI LINH</title>
 </head>
 <body>
-    <div class="invitation-container">
-        <div class="invitation-card">
-            <div data-aos="fade-down" class="header-text">.  Together, Since Always  .</div>
-            <div class="names-section">
-                <div data-aos="fade-left" class="bride-name">Ken Lee Xiu Rui</div>
-                <div data-aos="fade-in" class="connector">&</div>
-                <div data-aos="fade-right" class="groom-name">Nguyễn Thị Hồng Trúc</div>
+    <div id="loading-container" class="loading-container">
+        <div class="spinner"></div>
+    </div>
+    <div class="container">
+        <div class="container-wrapper">
+            <div class="box-top">
+                <div class="box-contop">
+                    <img src="anh/core/logo.png" alt="" class="img-top">
+                    <div class="box-dot">
+                        <label for="" class="dotwelcome"><i class="fa-solid fa-circle"></i></label>
+                        <label for="" class="lb-top">Always and forever</label>
+                        <label for="" class="dotwelcome"><i class="fa-solid fa-circle"></i></label>
+                    </div>
+                    <label for="" class="lb-top2">WELCOME TO OUR WEDDING</label>
+                    <label for="" class="lb-top3">Nhựt An và Hoài Linh</label>
+                </div>    
+            </div>     
+
+            <div class="info">
+                <!-- <div class="parents">
+                    <label for="" class="lb-parents">NHÀ TRAI: Ông Lee Nyuk Yong và Bà Poh Ah Hong</label>
+                    <label for="" class="lb-parents">NHÀ GÁI: Ông Nguyễn Hồng Thanh và Bà Nguyễn Thị Tuyết Hồng</label>
+                </div> -->
+
+                <div class="inv">
+                    <label for="" class="kinhmoi">trân trọng kính mời bạn <br>
+                        dành thời gian quý giá đến tham dự lễ cưới của</label>
+                    <label for="" class="kinhmoi">/PLEASE JOIN US AS WE CELEBRATE OUR WEDDING/</label>
+                    <label for="" class="lb-inv text-color">Nhựt An và Hoài Linh</label>
+                    
+                    <img src="anh/anh-cuoi/pic-wedding-welcome.jpg" alt="" class="img-inv">
+              
+                <div class="time-add">
+                    <label for="" class="lb-time">VÀO <strong>03:00PM</strong> NGÀY <strong>04.10.2025</strong></label>
+                    <label for="" class="lb-time">/AT 03:00PM, OCTOBER 04, 2025/</label>
+                    <label for="" class="lb-add text-color location-name" blank>An Lâm Retreat Sài Gòn River House</label>
+                </div>
+
+                <div class="box-map">
+                    <label for="" class="add2">21/4 KHU PHỐ TRUNG, PHƯỜNG VĨNH PHÚ, THUẬN AN</label>
+                    <label for="" class="add2">/21/4 KHU PHỐ TRUNG, VINH PHU WARD, THUAN AN, VN 590000/</label>
+                    <a href="https://maps.app.goo.gl/1DbcLaTzZUsgkzaT9?g_st=ipc" class="maps">XEM BẢN ĐỒ | MAPS</a>
+                </div>
+                  </div>
+                <div class="box-flow">
+                    <img src="anh/core/g81.png" alt="" class="">
+                </div>
+
             </div>
-            <div class="monogram">
-                <img data-aos="fade-in" src="./anh/g884.png" alt="">
+
+            <div class="box-timeline">
+                <div class="timeline-top">
+                    <label for="" class="lb-timeline1 text-color">Timeline</label>
+                </div>
+
+                <div class="box-icontime">
+                    <div class="timeline">
+                        <img src="anh/icon1-03.png" alt="" class="img-timeline">
+                        <label for="" class="lb-timeline"><strong>15:30  |</strong>  ĐÓN KHÁCH - WELCOME GUESTS</label>
+                    </div>
+                    <div class="timeline">
+                        <img src="anh/icon2-03.png" alt="" class="img-timeline">
+                        <label for="" class="lb-timeline"><strong>16:00  |</strong>  BẮT ĐẦU LỄ VOW - VOW CEREMONY</label>
+                    </div>
+                    <!-- <div class="timeline">
+                        <img src="anh/icon3-03.png" alt="" class="img-timeline">
+                        <label for="" class="lb-timeline"><strong>19:45  |</strong>  CHỤP HÌNH + MINI GAME</label>
+                    </div> -->
+                    <div class="timeline">
+                        <img src="anh/core/g60355.png" alt="" class="img-timeline">
+                        <label for="" class="lb-timeline"><strong>16:45  |</strong>  TIỆC COCKTAIL - COCKTAIL HOUR</label>
+                    </div>
+                    <div class="timeline">
+                        <img src="anh/icon4-03.png" alt="" class="img-timeline">
+                        <label for="" class="lb-timeline"><strong>18:15  |</strong>  TIỆC CHÍNH - RECEPTION PARTY</label>
+                    </div>
+                </div>
             </div>
             
-            <div data-aos="fade-left" class="save-date">Save Our Date</div>
-            <div data-aos="fade-right" class="celebration-text">You Are Invited To The Wedding Celebration</div>
-            
-            <div class="buttons-section">
-                <a data-aos="fade-up" href="./vi/thiepmoi.html" class="invitation-button">Xem Thiệp Mời | Tiếng Việt</a>
-                <a data-aos="fade-up" href="./en/thiepmoi.html" class="invitation-button">Invitation | English</a>
+           
+            <div class="box-dresscode">
+                <div class="dress-top">
+                    <label for="" class="lb-dress1 text-color">Dresscode</label>
+                    <!-- <label for="" class="lb-dress2">HÃY MẶC TRANG PHỤC THEO CÁC MÀU GỢI Ý ĐỂ CÓ NHỮNG TẤM ẢNH THẬT ĐẸP NHÉ </label> -->
+                </div>
+
+                <div class="box-dresscon">
+                    <!-- <div class="box-nam">
+                        <label for="" class="lb-nam">NAM</label>
+                        <div class="color-nam">
+                            <img src="anh/den-03.png" alt="" class="img-color">
+                            <label for="" class="lb-color">ĐEN</label>
+                        </div>
+                    </div> -->
+
+                    <div class="box-nu">
+                        <!-- <label for="" class="lb-nu">NỮ</label> -->
+                        <div class="box-color">
+                            <div class="box-item">
+                                <div class="color">
+                                    <img src="anh/core/g11581.png" alt="" class="img-color">
+                                </div>
+                                <label for="" class="lb-color">HỒNG</label>
+                                <label for="" class="lb-color-mini">/BABY PINK/</label>
+                            </div>
+                            <div class="box-item">
+                                <div class="color">
+                                    <img src="anh/core/path11587.png" alt="" class="img-color">
+                                </div>
+                                <label for="" class="lb-color">XANH</label>
+                                <label for="" class="lb-color-mini">/BABY BLUE/</label>
+                            </div>
+                            <div class="box-item">
+                                <div class="color">
+                                    <img src="anh/core/path11591.png" alt="" class="img-color">
+                                </div>
+                                <label for="" class="lb-color">BE</label>
+                                <label for="" class="lb-color-mini">/BEIGE/</label>
+                            </div>
+                            <div class="box-item">
+                                <div class="color">
+                                    <img src="anh/core/path11595.png" alt="" class="img-color">
+                                </div>
+                                <label for="" class="lb-color">XANH LÁ</label>
+                                <label for="" class="lb-color-mini">/SAGE GREEN/</label>
+                            </div>
+                              <div class="box-item">
+                                <div class="color">
+                                    <img src="anh/core/path11599.png" alt="" class="img-color">
+                                </div>
+                                <label for="" class="lb-color">ĐEN</label>
+                                <label for="" class="lb-color-mini">/BLACK/</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="box-image1">
+                <img src="anh/anh-cuoi/group-pic-1.jpg" alt="" class="img1">
+                <img src="anh/anh-cuoi/group-pic-2.jpg" alt="" class="img2">
+            </div>
+
+
+            <div class="logo">
+                <div class="box-flow">
+                    <img src="anh/flower2-03.png" alt="" class="">
+                </div>
+            </div>
+
+              <!-- Slider container -->
+            <div class="container-slide">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider3.jpg" alt="">
+                    </div>
+                     <div class="slide">
+                        <img src="anh/anh-cuoi/slider4.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider5.jpg" alt="">
+                    </div>
+                     <div class="slide">
+                        <img src="anh/anh-cuoi/slider6.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider7.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider8.jpg" alt="">
+                    </div>
+                     <div class="slide">
+                        <img src="anh/anh-cuoi/slider9.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider10.jpg" alt="">
+                    </div>
+                     <div class="slide">
+                        <img src="anh/anh-cuoi/slider11.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider12.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider13.jpg" alt="">
+                    </div>
+                     <div class="slide">
+                        <img src="anh/anh-cuoi/slider14.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="anh/anh-cuoi/slider15.jpg" alt="">
+                    </div>
+                </div>
+                <div class="dots"></div>
+            </div>
+
+         
+            <form action="" name="an-linh">
+                <div class="logo">
+                    <div class="box-flow">
+                        <img src="anh/flower3-03.png" alt="" class="">
+                    </div>
+                </div>
+                <div class="feed-info">
+                    <lable class="lb-form text-color">RSVP</lable>
+                    <lable class="lb-form1 text-color">Xác nhận tham dự</lable>
+                    <label for="" class="lb-dot"><i class="fa-solid fa-diamond"></i></label>
+                    <label for="" class="in-fe">KHÁCH MỜI VUI LÒNG XÁC NHẬN THAM DỰ<strong> TRƯỚC NGÀY 20.09</strong> <br>
+                        ĐỂ CHÚNG TÔI CÓ THỂ CHUẨN BỊ CHU ĐÁO NHẤT</label>
+                    <label for="" class="in-fe">/RSVP BY SEPTEMBER 20TH. THIS HELPS US <br>
+                        TO HOST YOU MORE THOUGHTFULLY AND FULLY. THANK YOU!!!/</label>
+                </div>
+    
+                <div class="container-check">
+                    <input class="box-feed" type="radio" value="yes" id="yes" name="CONFIRM">
+                    <label class="check-box check-box-yes" for="yes">
+                        <h3 class="til-check">SẼ THAM DỰ / YES</h3>
+                    </label>
+                    <input class="box-feed" type="radio" value="no" id="no" name="CONFIRM">
+                    <label class="check-box" for="no"> 
+                        <h3 class="til-check">KHÔNG THAM DỰ / NO</h3>
+                    </label>
+                </div>
+                
+                <div class="box-ten">
+                    <input required class="inp-ten" type="text"  name="NAME" placeholder="Tên khách mời / Name">
+                    <input required class="inp-ten" type="text" name="GUEST" placeholder="Số Người Đi Kèm / Number of attendance" maxlength="1" title="Vui lòng nhập đúng 1 chữ số" pattern="\d" />
+
+                </div>
+
+                <div class="box-label">
+                    <label for="" class="lb-text">BẠN CÓ LƯU Ý ĐẶC BIỆT GÌ VỀ THỨC ĂN KHÔNG? <br>
+                    /DO YOU HAVE ANY DIETARY RESTRICTIONS?/
+                    </label>
+                </div>
+                <div class="container-check">
+                    <input class="box-feed" type="radio" value="KHÔNG" id="yfood" name="LƯU Ý THỨC ĂN">
+                    <input class="inp-ten" type="text" name="note" placeholder="" maxlength="1"/>
+
+                </div>
+                <!-- <div class="box-ten">
+                    <textarea id="loi-chuc" name="WISH" rows="4" cols="50" placeholder="HÃY GỬI LỜI CHÚC ĐẾN CÔ DÂU VÀ CHÚ RỂ NHÉ"></textarea>
+                </div> -->
+                <div class="wrapper">
+                    <button class="xacnhan" type="submit">XÁC NHẬN / CONFIRM</button>
+                </div>
+            </form>
+            <div class="card">
+                <p>
+                “Gửi đến những người thân yêu và bạn bè không thể cùng hiện diện trong ngày cưới. 
+                Chúng mình sẽ rất nhớ bạn trong ngày đặc biệt này, nhưng tình cảm và lời chúc phúc của bạn 
+                luôn vô cùng ý nghĩa và sẽ mãi được trân trọng.”
+                </p>
+                <div class="lb-dot-card">
+                    <label for="" class="lb-dot"><i class="fa-solid fa-diamond"></i></label>
+                </div>
+
+                <p style="font-style: italic;">
+                /“FOR OUR DEAR FRIENDS AND FAMILY WHO CANNOT BE
+                WITH US. WE’LL MISS YOU ON OUR BIG DAY, BUT YOUR
+                LOVE AND WISHES MEAN THE WORLD TO US AND WILL
+
+                ALWAYS BE CHERISHED”/
+                </p>
+
+                <div class="flower">
+                    <img src="anh/core/g81.png" alt="" class="">
+                </div>
+
+                <p>
+                Gửi quà mừng cưới dành tặng cô dâu và chú rể nhé!<br>
+                <em>/Send wedding gifts for the bride and groom./</em>
+                </p>
+                <div class="container-qr-code">
+                    <a href="#" class="qr-btn">QR CODE</a>
+                </div>
+
+                <!-- <p>
+                Viết lời chúc dành cho cô dâu và chú rể<br>
+                <em>/Write a wish for the bride and groom/</em>
+                </p> -->
+
+                <textarea class="input-box wish-box" rows="2"  placeholder="VIẾT LỜI CHÚC DÀNH CHO CÔ DÂU VÀ CHÚ RỂ
+/WRITE A WISH FOR THE BRIDE AND GROOM/"></textarea>
+
+                <br>
+                <button class="send-btn">GỬI / SEND</button>
+            </div>
+
+            <div class="end" >
+                <!-- <label for="" class="lb-end" >QUÉT MÃ QR CODE DƯỚI ĐÂY <br>
+                    NẾU BẠN MUỐN GỬI QUÀ MỪNG CƯỚI DÀNH TẶNG CHO <br>
+                     <strong>KEN</strong> VÀ <strong>TRÚC</strong> NHÉ!</label> -->
+                <!-- <img src="anh/core/Cici3689.jpg" alt="" class="img-qr">   -->
+                <label for="" class="lb-thank text-color">Thank you!</label>
+                <label for="" class="lb-end
+                ">SỰ HIỆN DIỆN CỦA BẠN LÀ NIỀM HẠNH PHÚC CỦA CHÚNG MÌNH. HẸN GẶP LẠI BẠN TẠI LỄ CƯỚI NHÉ.</label>  
+                <label for="" class="yen">YÊN STUDIO | YÊN BỀ GIA THẤT</label>
+            </div>
             </div>
         </div>
     </div>
-    <script>
-        AOS.init({
-            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-            initClassName: 'aos-init', // class applied after initialization
-            animatedClassName: 'aos-animate', // class applied on animation
-            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-            throttleDelay: 150, // the delay on throttle used while scrolling the page (advanced)
-            
+    
 
-            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-            offset: 120, // offset (in px) from the original trigger point
-            delay: 0, // values from 0 to 3000, with step 50ms
-            duration: 1000, // values from 0 to 3000, with step 50ms
-            easing: 'ease', // default easing for AOS animations
-            once: false, // whether animation should happen only once - while scrolling down
-            mirror: false, // whether elements should animate out while scrolling past them
-            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+
+
+    <script>
+        window.onload = function() {
+    // Lấy tất cả các phần tử cho các hiệu ứng fade-down, fade-up, fade-right, fade-left, zoom-in
+    const fadeDownElements = document.querySelectorAll('.kinhmoi, .lb-inv');  // Các phần tử fade-down
+    const fadeUpElements = document.querySelectorAll('.lb-time, .lb-add, .timeline, .in-fe, .container-check, .inp-ten, .lb-text, #loi-chuc');    // Các phần tử fade-up
+    const fadeRightElements = document.querySelectorAll('.box-nu, .img1');                               // Các phần tử fade-right
+    const fadeLeftElements = document.querySelectorAll('.box-nam, .img2');                                // Các phần tử fade-left
+    const zoomInElements = document.querySelectorAll('.timeline-top, .lb-dress1, .lb-dress2, .xacnhan');                // Các phần tử zoom-in
+
+    // Cấu hình của IntersectionObserver
+    const options = {
+        root: null, // Theo mặc định là viewport
+        threshold: 0.5 // Kích hoạt khi 50% phần tử hiển thị trong viewport
+    };
+
+    // Tạo đối tượng IntersectionObserver để theo dõi sự xuất hiện và mất đi của phần tử
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Nếu phần tử xuất hiện trong viewport, thêm lớp "visible"
+                entry.target.classList.add('visible');
+            } else {
+                // Nếu phần tử không còn trong viewport, xóa lớp "visible"
+                entry.target.classList.remove('visible');
+            }
         });
+    }, options);
+
+    // Quan sát các phần tử theo từng hiệu ứng
+    fadeDownElements.forEach(element => observer.observe(element));
+    fadeUpElements.forEach(element => observer.observe(element));
+    fadeRightElements.forEach(element => observer.observe(element));
+    fadeLeftElements.forEach(element => observer.observe(element));
+    zoomInElements.forEach(element => observer.observe(element));
+};
+
     </script>
+<script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxgPMaOgT_WwTpxvhDfLMLvpG27EO9cTFebhACu-UbEqWjmou1cCU0sYa0urgECblui/exec?sheet=vi';
+        const form = document.forms['an-linh'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Ngừng việc gửi form mặc định
+
+            document.getElementById('loading-container').style.display = 'flex';
+
+            let formData = new FormData(form);
+            let data = Object.fromEntries(formData.entries());
+            const confirm = data.CONFIRM;
+            const name = data.NAME;
+            const number_guest = data.GUEST;
+            const wish = data.WISH;
+
+            // Gửi dữ liệu form đi
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new URLSearchParams({name, confirm, number_guest, wish})
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Nếu dữ liệu gửi thành công, làm mới lại form
+                        form.reset(); // Làm mới lại form
+
+                        document.getElementById('loading-container').style.display = 'none';
+
+                        Swal.fire({
+                            title: 'Thành công',
+                            text: 'Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nhaa <3',
+                            imageWidth: 300,
+                            imageHeight: 200,
+                            confirmButtonText: 'ĐÓNG',
+                            background: '#f8f8f8',
+                            padding: '20px',
+                            customClass: {
+                                popup: 'custom-popup',
+                                title: 'custom-title',
+                                confirmButton: 'custom-confirm-button'
+                            },
+                            didOpen: () => {
+                                document.querySelector('.swal2-popup').style.borderRadius = '10px'; // Bo tròn các góc
+                            }
+                        });
+                    } else {
+                        // Nếu gặp lỗi khi gửi dữ liệu
+                        console.error('Error!', response);
+
+                        document.getElementById('loading-container').style.display = 'none';
+
+                        Swal.fire({
+                            title: 'Oops!',
+                            text: 'Lỗi mất rồi thử lại giúp chúng mình nhé',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                })
+                .catch(error => {
+                    // Xử lý lỗi nếu có
+                    console.error('Error!', error.message);
+
+                    document.getElementById('loading-container').style.display = 'none';
+
+                    Swal.fire({
+                        title: 'Oops!',
+                        text: 'Lỗi mất rồi thử lại giúp chúng mình nhé',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                });
+        });
+</script>
+<script>
+    "use strict";
+     // Select all slides
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.querySelector('.dots');
+    let currentIndex = 0;
+    let slideInterval;
+
+    // tạo dots
+    slides.forEach((_, index) => {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      dot.addEventListener('click', () => showSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+      slides.forEach(s => s.style.display = 'none');
+      dots.forEach(d => d.classList.remove('active'));
+
+      slides[index].style.display = 'block';
+      dots[index].classList.add('active');
+
+      currentIndex = index;
+
+      // reset interval để không bị nhảy sai
+      clearInterval(slideInterval);
+      startSlideShow();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function startSlideShow() {
+      slideInterval = setInterval(nextSlide, 3000); // 3 giây đổi ảnh
+    }
+
+    // hiển thị slide đầu tiên
+    showSlide(currentIndex);
+    startSlideShow();
+
+  </script>
+   <script>
+const musicCircle = document.getElementById("musicCircle");
+const audio = document.getElementById("audio");
+const videoIframe = document.getElementById("video");
+
+// Thêm sự kiện khi nhấn vào vòng tròn
+musicCircle.addEventListener("click", toggleMusic);
+
+// Hàm điều khiển việc phát hoặc tạm dừng nhạc
+function toggleMusic() {
+    if (audio.paused) {
+        audio.play(); // Phát nhạc
+        musicCircle.classList.add("spin"); // Bắt đầu xoay
+    } else {
+        audio.pause(); // Dừng nhạc
+        musicCircle.classList.remove("spin"); // Dừng xoay
+    }
+}
+
+// Tạo đối tượng YouTube Player API
+let player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video', {
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+// Lắng nghe sự kiện trạng thái của video
+function onPlayerStateChange(event) {
+    // Khi video bắt đầu phát (state = 1), dừng nhạc và dừng xoay vòng tròn
+    if (event.data === YT.PlayerState.PLAYING) {
+        if (!audio.paused) {
+            audio.pause(); // Dừng nhạc
+            musicCircle.classList.remove("spin"); // Dừng xoay vòng tròn
+        }
+    }
+}
+
+// Tải API YouTube
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+</script>
 </body>
 </html>
