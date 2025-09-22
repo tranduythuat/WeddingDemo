@@ -250,7 +250,7 @@ a {
 
 /* time */
 .time {
-    background-image: url("../images/g190.png");
+    background-image: url("https://i.postimg.cc/L4fTDmHW/g190.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -264,7 +264,7 @@ a {
 
 .time h2 {
     font-family: "PinyonScript", sans-serif;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: normal;
     color: var(--color-primary);
     margin-top: 200px;
@@ -299,7 +299,7 @@ a {
 
 /* location */
 .location {
-    background-image: url("../images/white-backgroud-2.png");
+    background-image: url("https://i.postimg.cc/6q8ZSLRw/white-backgroud-2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -383,7 +383,7 @@ a {
 
 /*========================= timeline ===========================*/
 .timeline {
-    background-image: url("../images/image146.png");
+    background-image: url("https://i.postimg.cc/zXgkd88M/image146.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -491,7 +491,7 @@ a {
 
 /* ================= dresscode ======================= */
 .dresscode {
-    background-image: url("../images/white-background-3.png");
+    background-image: url("https://i.postimg.cc/85KWtn7t/white-background-3.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -571,7 +571,7 @@ a {
 
 /* ===================== RSVP ================================ */
 .rsvp {
-    background-image: url("../images/g396.png");
+    background-image: url("https://i.postimg.cc/0N5bF0R3/g396.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -581,7 +581,7 @@ a {
 }
 
 .rsvp .rsvp-container {
-    background-image: url("../images/g426267.png");
+    background-image: url("https://i.postimg.cc/tJLNXmt2/g426267.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -736,7 +736,7 @@ a {
 
 /* ===================== extra-info ================================ */
 .extra-info {
-    background-image: url("../images/full.png");
+    background-image: url("https://i.postimg.cc/x8ZvTFYc/full.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
