@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Oanh & Đông</title>
+</head>
+
+<body>
+    <div class="invitation-container">
+        <div class="decorative-border"></div>
+
+        <div class="invitation-header">
+            <h1 class="invitation-title">THIỆP MỜI</h1>
+            <p class="invitation-subtitle">Trân trọng kính mời</p>
+        </div>
+
+        <div class="invitation-body">
+            <div class="event-details">
+                <h2 class="event-name">TIỆC CƯỚI</h2>
+
+                <div class="bride-groom-names">
+                    <div class="name-section">
+                        <!-- <span class="name-label">Cô dâu</span> -->
+                        <h3 class="bride-name">Phương Oanh</h3>
+                    </div>
+                    <div class="heart-symbol">♥</div>
+                    <div class="name-section">
+                        <!-- <span class="name-label">Chú rể</span> -->
+                        <h3 class="groom-name">Lập Đông</h3>
+                    </div>
+                </div>
+
+                <div class="album" style="width: 100%;">
+                   <img style="width: 100%;" src="https://live.staticflickr.com/6075/6092551085_55e19914fe_c.jpg" alt=""/>
+                </div>
+            </div>
+
+            <div class="invitation-message">
+                Kính mời Anh/Chị cùng gia đình đến dự lễ thành hôn của chúng tôi. Sự
+                hiện diện của Anh/Chị sẽ là niềm vinh hạnh và niềm hạnh phúc lớn lao
+                đối với gia đình chúng tôi trong ngày trọng đại này.
+            </div>
+
+            <button class="rsvp-button" onclick="confirmAttendance()">
+                XÁC NHẬN THAM DỰ
+            </button>
+        </div>
+
+        <div class="invitation-qrcode">
+            <div class="image-box">
+                <img src="./images/qrcode.png" alt="QR code">
+            </div>
+        </div>
+        
+        <div class="invitation-footer">
+            <p>Vui lòng xác nhận tham dự trước ngày 01/10/2025</p>
+            <p>Liên hệ: xxxx xx6 789 | xxxxx@gmail.com</p>
+        </div>
+
+    </div>
+
+    <script>
+        function confirmAttendance() {
+            alert(
+                "Cảm ơn bạn đã xác nhận tham dự! 💒\nChúng tôi rất mong được chia sẻ niềm hạnh phúc cùng bạn trong ngày trọng đại này."
+            );
+        }
+
+        // Thêm hiệu ứng hover cho các detail items
+        document.querySelectorAll(".detail-item").forEach((item) => {
+            item.addEventListener("mouseenter", function () {
+                this.style.transform = "translateX(5px)";
+                this.style.transition = "transform 0.3s ease";
+            });
+
+            item.addEventListener("mouseleave", function () {
+                this.style.transform = "translateX(0)";
+            });
+        });
+    </script>
+</body>
+
+</html>
